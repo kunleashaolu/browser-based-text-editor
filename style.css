@@ -26,10 +26,48 @@ header .title {
 }
 
 .clock {
+  /* general clock vars */
+  --hour-hand-color: var(--stone-5);
+  --hour-hand-degrees: 0deg;
+  --minute-hand-color: var(--stone-5);
+  --minute-hand-degrees: 0deg;
+  --second-hand-color: var(--stone-7);
+  --second-hand-degrees: 0deg;
+
+  position: relative;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: var(--stone-2);
+  background: var(--stone-1);
+  border: 1px solid var(--stone-5);
+}
+
+.hand {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  height: 45%;
+  width: 0.4px;
+  background: var(--second-hand-color);
+  transform-origin: bottom center;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.second-hand {
+  transform: rotate(var(--second-hand-degrees));
+}
+
+.hour-hand {
+  height: 38%;
+  border-radius: 40px;
+  background-color: var(--hour-hand-color);
+  transform: rotate(var(--hour-hand-degrees));
+}
+
+.minute-hand {
+  height: 42%;
+  background: var(--minute-hand-color);
+  transform: rotate(var(--minute-hand-degrees));
 }
 
 .theme-toggle label {
@@ -38,6 +76,7 @@ header .title {
   display: grid;
   background-color: var(--gray-2);
   border-radius: 50%;
+  min-width: 31px;
   padding: 4px;
 
   svg {
