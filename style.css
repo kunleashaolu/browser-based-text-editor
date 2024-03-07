@@ -1,25 +1,8 @@
 @import 'reset.css';
 @import 'https://unpkg.com/open-props';
 
-ul,
-ol {
-  list-style: none;
-}
-
-/* svg {
-  color: var(--gray-0);
-} */
-
-button {
-  background: none;
-  border: none;
-  font-family: inherit;
-  cursor: pointer;
-}
-
 body {
   position: relative;
-  height: 100dvh;
   background-color: var(--gray-0);
   font-family: 'Satoshi', sans-serif;
   display: grid;
@@ -32,13 +15,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
-  .title {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    align-items: center;
-  }
+header .title {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  height: min-content;
 }
 
 .clock {
@@ -48,35 +32,38 @@ header {
   background: var(--stone-2);
 }
 
-.theme-toggle {
-  label {
-    height: 22px;
-    position: relative;
-    cursor: pointer;
-    display: grid;
+.theme-toggle label {
+  position: relative;
+  cursor: pointer;
+  display: grid;
+  background-color: var(--gray-2);
+  border-radius: 50%;
+  padding: 4px;
 
-    svg {
-      grid-area: -1/1;
-    }
+  svg {
+    grid-area: -1/1;
+  }
 
-    .moon {
-      transform: translateY(-100%);
-    }
+  .moon {
+    transform: translateY(-100%);
+    display: none;
+  }
+}
 
-    input {
-      position: absolute;
-      opacity: 0;
-      width: 1em;
-      height: 1em;
-    }
+label .toggle {
+  position: absolute;
+  opacity: 0;
+  width: 1em;
+  height: 1em;
 
-    input:checked ~ .moon {
-      transform: translateY(0%);
-    }
+  &:checked ~ .moon {
+    transform: translateY(0%);
+    display: block;
+  }
 
-    input:checked ~ .sun {
-      transform: translateY(100%);
-    }
+  &:checked ~ .sun {
+    transform: translateY(100%);
+    display: none;
   }
 }
 
@@ -85,8 +72,8 @@ header {
   background-color: #ffffff;
   position: fixed;
   bottom: 20px;
-  box-shadow: var(--shadow-5);
   border-radius: 8px;
+  box-shadow: var(--shadow-5);
 }
 
 .menu-wrapper {
@@ -111,5 +98,7 @@ header {
 
 .menu-button button {
   min-height: 40px;
-  padding-inline: 12px;
+  padding-inline: 14px;
+  background: none;
+  border: none;
 }
