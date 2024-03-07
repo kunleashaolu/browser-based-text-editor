@@ -1,0 +1,115 @@
+@import 'reset.css';
+@import 'https://unpkg.com/open-props';
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* svg {
+  color: var(--gray-0);
+} */
+
+button {
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+body {
+  position: relative;
+  height: 100dvh;
+  background-color: var(--gray-0);
+  font-family: 'Satoshi', sans-serif;
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+}
+
+header {
+  padding-block: 12px;
+  padding-inline: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .title {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.clock {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--stone-2);
+}
+
+.theme-toggle {
+  label {
+    height: 22px;
+    position: relative;
+    cursor: pointer;
+    display: grid;
+
+    svg {
+      grid-area: -1/1;
+    }
+
+    .moon {
+      transform: translateY(-100%);
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      width: 1em;
+      height: 1em;
+    }
+
+    input:checked ~ .moon {
+      transform: translateY(0%);
+    }
+
+    input:checked ~ .sun {
+      transform: translateY(100%);
+    }
+  }
+}
+
+.floating-menu {
+  justify-self: center;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 20px;
+  box-shadow: var(--shadow-5);
+  border-radius: 8px;
+}
+
+.menu-wrapper {
+  display: flex;
+}
+
+.menu-button {
+  &:first-of-type {
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+
+  &:last-of-type {
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  &:hover {
+    background-color: var(--stone-2);
+  }
+}
+
+.menu-button button {
+  min-height: 40px;
+  padding-inline: 12px;
+}
