@@ -6,7 +6,7 @@ body {
   background-color: var(--gray-0);
   font-family: 'Satoshi', sans-serif;
   display: grid;
-  grid-template-rows: max-content 1fr max-content;
+  grid-template-rows: max-content 1fr;
 }
 
 header {
@@ -27,11 +27,11 @@ header .title {
 
 .clock {
   /* general clock vars */
-  --hour-hand-color: var(--stone-5);
+  --hour-hand-color: var(--stone-7);
   --hour-hand-degrees: 0deg;
-  --minute-hand-color: var(--stone-5);
+  --minute-hand-color: var(--stone-7);
   --minute-hand-degrees: 0deg;
-  --second-hand-color: var(--stone-7);
+  --second-hand-color: var(--stone-5);
   --second-hand-degrees: 0deg;
 
   position: relative;
@@ -47,18 +47,19 @@ header .title {
   left: 50%;
   bottom: 50%;
   height: 45%;
-  width: 0.4px;
+  width: 0.6px;
   background: var(--second-hand-color);
   transform-origin: bottom center;
   transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
 
 .second-hand {
+  width: 0.3px;
   transform: rotate(var(--second-hand-degrees));
 }
 
 .hour-hand {
-  height: 38%;
+  height: 36%;
   border-radius: 40px;
   background-color: var(--hour-hand-color);
   transform: rotate(var(--hour-hand-degrees));
@@ -104,6 +105,11 @@ label .toggle {
     transform: translateY(100%);
     display: none;
   }
+}
+
+main {
+  width: 100ch;
+  justify-self: center;
 }
 
 .floating-menu {
