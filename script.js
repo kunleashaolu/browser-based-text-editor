@@ -1,4 +1,6 @@
 const clock = document.getElementById('clock')
+const themeSwitch = document.getElementById('theme-switch')
+const screen = document.firstElementChild
 
 function setDate() {
   // Code to set the current time and hand angles.
@@ -14,3 +16,9 @@ function setDate() {
 
 setInterval(setDate, 1000)
 setDate()
+
+function setTheme(theme) {
+  screen.setAttribute('color-scheme', theme)
+}
+
+themeSwitch.addEventListener('change', (e) => (e.target.checked ? setTheme('dark') : setTheme('light')))
