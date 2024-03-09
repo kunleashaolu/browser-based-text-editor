@@ -1,0 +1,31 @@
+:root {
+  color-scheme: light;
+
+  --surface: var(--gray-0);
+  --surfcae-2: var(--gray-0);
+  --surface-3: var(--stone-2);
+  --surface-shadow: var(--shadow-5);
+  --clock-surface: var(--gray-0);
+  --clock-hand-1: var(--stone-7);
+  --clock-hand-2: var(--stone-5);
+  --clock-border: var(--stone-5);
+  --border: var(--gray-6);
+  --icon: var(--gray-12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --surface: var(--gray-12);
+    --surface-2: var(--gray-10);
+    --surface-3: var(--stone-8);
+    --surface-shadow: var(--shadow-5);
+    --clock-surface: var(--stone-11);
+    --clock-hand-1: var(--stone-4);
+    --clock-hand-2: var(--stone-3);
+    --clock-border: var(--stone-3);
+    --border: var(--gray-3);
+    --icon: var(--gray-0);
+  }
+}
