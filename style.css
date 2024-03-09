@@ -1,9 +1,41 @@
 @import 'reset.css';
 @import 'https://unpkg.com/open-props';
 
+:root {
+  color-scheme: light;
+
+  --surface: var(--gray-0);
+  --surfcae-2: var(--gray-0);
+  --surface-3: var(--stone-2);
+  --surface-shadow: var(--shadow-5);
+  --clock-surface: var(--stone-1);
+  --clock-hand-1: var(--stone-7);
+  --clock-hand-2: var(--stone-5);
+  --clock-border: var(--stone-5);
+  --border: var(--gray-6);
+  --icon: var(--gray-12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --surface: var(--gray-12);
+    --surface-2: var(--gray-10);
+    --surface-3: var(--stone-8);
+    --surface-shadow: var(--shadow-5);
+    --clock-surface: var(--stone-11);
+    --clock-hand-1: var(--stone-4);
+    --clock-hand-2: var(--stone-3);
+    --clock-border: var(--stone-3);
+    --border: var(--gray-3);
+    --icon: var(--gray-0);
+  }
+}
+
 body {
   position: relative;
-  background-color: var(--gray-0);
+  background-color: var(--surface);
   font-family: 'Satoshi', sans-serif;
   display: grid;
   grid-template-rows: max-content 1fr;
@@ -31,25 +63,25 @@ header .title {
   font-weight: 500;
 
   &:focus {
-    border-bottom: 1px solid var(--gray-6);
+    border-bottom: 1px solid var(--border);
   }
 }
 
 .clock {
   /* general clock vars */
-  --hour-hand-color: var(--stone-7);
+  --hour-hand-color: var(--clock-hand-1);
   --hour-hand-degrees: 0deg;
-  --minute-hand-color: var(--stone-7);
+  --minute-hand-color: var(--clock-hand-1);
   --minute-hand-degrees: 0deg;
-  --second-hand-color: var(--stone-5);
+  --second-hand-color: var(--clock-hand-2);
   --second-hand-degrees: 0deg;
 
   position: relative;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: var(--stone-1);
-  border: 1px solid var(--stone-5);
+  background: var(--clock-surface);
+  border: 1px solid var(--clock-border);
 }
 
 .hand {
@@ -85,7 +117,7 @@ header .title {
   position: relative;
   cursor: pointer;
   display: grid;
-  background-color: var(--gray-2);
+  background-color: var(--surface-2);
   border-radius: 50%;
   min-width: 31px;
   padding: 4px;
@@ -120,16 +152,16 @@ label .toggle {
 main {
   width: min(100ch, 80vw);
   justify-self: center;
-  /* outline: none; */
+  outline: none;
 }
 
 .floating-menu {
   justify-self: center;
-  background-color: #ffffff;
+  background-color: var(--surface-2);
   position: fixed;
   bottom: 20px;
   border-radius: 8px;
-  box-shadow: var(--shadow-5);
+  box-shadow: var(--surface-shadow);
 }
 
 .menu-wrapper {
@@ -148,7 +180,7 @@ main {
   }
 
   &:hover {
-    background-color: var(--stone-2);
+    background-color: var(--surface-3);
   }
 }
 
