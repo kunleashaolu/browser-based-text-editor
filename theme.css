@@ -19,9 +19,9 @@
 
     --surface: var(--gray-12);
     --surface-2: var(--gray-10);
-    --surface-3: var(--stone-8);
+    --surface-3: var(--gray-12);
     --surface-shadow: var(--shadow-5);
-    --clock-surface: var(--stone-11);
+    --clock-surface: var(--gray-10);
     --clock-hand-1: var(--stone-4);
     --clock-hand-2: var(--stone-3);
     --clock-border: var(--stone-3);
@@ -50,9 +50,9 @@
 
   --surface: var(--gray-12);
   --surface-2: var(--gray-10);
-  --surface-3: var(--stone-8);
+  --surface-3: var(--gray-12);
   --surface-shadow: var(--shadow-5);
-  --clock-surface: var(--stone-11);
+  --clock-surface: var(--gray-10);
   --clock-hand-1: var(--stone-4);
   --clock-hand-2: var(--stone-3);
   --clock-border: var(--stone-3);
