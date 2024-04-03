@@ -5,6 +5,7 @@
   --surfcae-2: var(--gray-0);
   --surface-3: var(--stone-2);
   --surface-shadow: var(--shadow-5);
+  --light-shadow: var(--shadow-3);
   --clock-surface: var(--gray-0);
   --clock-hand-1: var(--stone-7);
   --clock-hand-2: var(--stone-5);
@@ -21,6 +22,7 @@
     --surface-2: var(--gray-10);
     --surface-3: var(--gray-12);
     --surface-shadow: var(--shadow-5);
+    --light-shadow: var(--shadow-3);
     --clock-surface: var(--gray-10);
     --clock-hand-1: var(--stone-4);
     --clock-hand-2: var(--stone-3);
@@ -37,6 +39,7 @@
   --surfcae-2: var(--gray-0);
   --surface-3: var(--stone-2);
   --surface-shadow: var(--shadow-5);
+  --light-shadow: var(--shadow-3);
   --clock-surface: var(--gray-0);
   --clock-hand-1: var(--stone-7);
   --clock-hand-2: var(--stone-5);
@@ -52,6 +55,7 @@
   --surface-2: var(--gray-10);
   --surface-3: var(--gray-12);
   --surface-shadow: var(--shadow-5);
+  --light-shadow: var(--shadow-3);
   --clock-surface: var(--gray-10);
   --clock-hand-1: var(--stone-4);
   --clock-hand-2: var(--stone-3);

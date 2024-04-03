@@ -139,6 +139,8 @@ main {
 }
 
 .menu-button {
+  position: relative;
+
   &:first-of-type {
     border-bottom-left-radius: 8px;
     border-top-left-radius: 8px;
@@ -148,10 +150,6 @@ main {
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;
   }
-
-  &:hover {
-    background-color: var(--surface-3);
-  }
 }
 
 .menu-button button {
@@ -159,4 +157,42 @@ main {
   padding-inline: 14px;
   background: none;
   border: none;
+  display: grid;
+  align-items: center;
+
+  & > .selected {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  &:hover {
+    background-color: var(--surface-3);
+  }
+
+  &:focus {
+    ~ .menu-dropdown {
+      display: grid;
+    }
+  }
+}
+
+.menu-dropdown {
+  position: absolute;
+  background-color: var(--surface-2);
+  box-shadow: var(--light-shadow);
+  border-radius: 8px;
+  display: none;
+  gap: 6px;
+  bottom: 120%;
+  left: 0;
+}
+
+.menu-dropdown li {
+  padding: 8px 14px;
+
+  &:hover {
+    background-color: var(--surface-3);
+  }
 }
