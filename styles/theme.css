@@ -2,7 +2,7 @@
   color-scheme: light;
 
   --surface: var(--gray-0);
-  --surfcae-2: var(--gray-0);
+  --surface-2: var(--gray-0);
   --surface-3: var(--stone-2);
   --surface-shadow: var(--shadow-5);
   --light-shadow: var(--shadow-3);
@@ -36,7 +36,7 @@
   color-scheme: light;
 
   --surface: var(--gray-0);
-  --surfcae-2: var(--gray-0);
+  --surface-2: var(--gray-0);
   --surface-3: var(--stone-2);
   --surface-shadow: var(--shadow-5);
   --light-shadow: var(--shadow-3);
