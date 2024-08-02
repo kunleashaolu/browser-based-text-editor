@@ -7,18 +7,54 @@ body {
   background-color: var(--surface);
   font-family: 'Satoshi', sans-serif;
   display: grid;
+  grid-template-columns: max-content 1fr;
+}
+
+.sidenav {
+  width: 20vw;
+  background: var(--surface-2);
+  display: grid;
+  padding-block: 2rem;
+
+  ul {
+    align-self: flex-end;
+    display: grid;
+    height: fit-content;
+
+    li {
+      padding: 0.5em 0.8em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      & > a {
+        text-decoration: none;
+      }
+
+      &:hover {
+        background-color: var(--surface-3);
+      }
+    }
+  }
+}
+
+.main-container {
+  display: grid;
   grid-template-rows: max-content 1fr;
 }
 
-header {
+.header {
+  background-color: var(--surface);
   padding-block: 12px;
   padding-inline: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0px;
 }
 
-header .title {
+.header .title {
   display: flex;
   gap: 4px;
   justify-content: center;
@@ -127,11 +163,11 @@ main {
 
 .floating-menu {
   justify-self: center;
-  background-color: var(--surface-2);
   position: fixed;
   bottom: 20px;
   border-radius: 8px;
   box-shadow: var(--surface-shadow);
+  background-color: var(--surface-2);
 }
 
 .menu-wrapper {
@@ -176,6 +212,11 @@ main {
       display: grid;
     }
   }
+}
+
+#selected-align-style {
+  display: grid;
+  align-items: center;
 }
 
 .menu-dropdown {
