@@ -43,6 +43,12 @@ body {
   grid-template-rows: max-content 1fr;
 }
 
+.notes-btn {
+  justify-self: start;
+  position: fixed;
+  bottom: 20px;
+}
+
 .header {
   background-color: var(--surface);
   padding-block: 12px;
