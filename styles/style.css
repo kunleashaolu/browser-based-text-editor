@@ -14,7 +14,7 @@ body {
   width: 20vw;
   background: var(--surface-2);
   display: grid;
-  padding-block: 2rem;
+  padding-bottom: 20px;
 
   ul {
     align-self: flex-end;
@@ -44,9 +44,20 @@ body {
 }
 
 .notes-btn {
+  display: grid;
   justify-self: start;
   position: fixed;
+  margin-left: 12px;
   bottom: 20px;
+  border: none;
+  border-radius: 50%;
+  transition: 0.2s ease-in-out;
+  padding: 7px;
+  align-items: center;
+
+  &:hover {
+    background: var(--surface-2);
+  }
 }
 
 .header {
