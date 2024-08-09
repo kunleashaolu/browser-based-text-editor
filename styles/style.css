@@ -7,14 +7,17 @@ body {
   background-color: var(--surface);
   font-family: 'Satoshi', sans-serif;
   display: grid;
-  grid-template-columns: max-content 1fr;
+
+  &:has(.sidenav[opened]) {
+    grid-template-columns: max-content 1fr;
+  }
 }
 
 .sidenav {
   width: 20vw;
   background: var(--surface-2);
-  display: grid;
   padding-bottom: 20px;
+  display: none;
 
   ul {
     align-self: flex-end;
@@ -36,6 +39,10 @@ body {
       }
     }
   }
+}
+
+.sidenav[opened] {
+  display: grid;
 }
 
 .main-container {
