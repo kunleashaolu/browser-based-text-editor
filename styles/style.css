@@ -189,9 +189,9 @@ main {
   justify-self: center;
   position: fixed;
   bottom: 20px;
-  border-radius: 8px;
   box-shadow: var(--surface-shadow);
   background-color: var(--surface-2);
+  border-radius: 8px;
 }
 
 .menu-wrapper {
@@ -201,40 +201,40 @@ main {
 .menu-button {
   position: relative;
 
-  &:first-of-type {
-    border-bottom-left-radius: 8px;
-    border-top-left-radius: 8px;
-  }
-
-  &:last-of-type {
-    border-bottom-right-radius: 8px;
-    border-top-right-radius: 8px;
-  }
-}
-
-.menu-button button {
-  min-height: 40px;
-  padding-inline: 14px;
-  background: none;
-  border: none;
-  display: grid;
-  align-items: center;
-
-  & > span {
-    display: flex;
+  button {
+    min-height: 40px;
+    padding-inline: 14px;
+    background: none;
+    border: none;
+    display: grid;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
-  }
 
-  &:hover {
-    background-color: var(--surface-3);
-  }
-
-  &:focus {
-    ~ .menu-dropdown {
-      display: grid;
+    & > span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
     }
+
+    &:hover {
+      background-color: var(--surface-3);
+    }
+
+    &:focus {
+      ~ .menu-dropdown {
+        display: grid;
+      }
+    }
+  }
+
+  .radius-left {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  .radius-right {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
   }
 }
 
@@ -248,6 +248,7 @@ main {
   background-color: var(--surface-2);
   box-shadow: var(--light-shadow);
   border-radius: 8px;
+  overflow: hidden;
   display: none;
   gap: 6px;
   bottom: 120%;

@@ -2,7 +2,7 @@
   color-scheme: light;
 
   --surface: var(--gray-0);
-  --surface-2: var(--gray-0);
+  --surface-2: var(--gray-1);
   --surface-3: var(--stone-2);
   --surface-shadow: var(--shadow-5);
   --light-shadow: var(--shadow-3);
@@ -20,7 +20,7 @@
 
     --surface: var(--gray-12);
     --surface-2: var(--gray-10);
-    --surface-3: var(--gray-12);
+    --surface-3: var(--gray-9);
     --surface-shadow: var(--shadow-5);
     --light-shadow: var(--shadow-3);
     --clock-surface: var(--gray-10);
@@ -36,7 +36,7 @@
   color-scheme: light;
 
   --surface: var(--gray-0);
-  --surface-2: var(--gray-0);
+  --surface-2: var(--gray-1);
   --surface-3: var(--stone-2);
   --surface-shadow: var(--shadow-5);
   --light-shadow: var(--shadow-3);
@@ -53,7 +53,7 @@
 
   --surface: var(--gray-12);
   --surface-2: var(--gray-10);
-  --surface-3: var(--gray-12);
+  --surface-3: var(--gray-9);
   --surface-shadow: var(--shadow-5);
   --light-shadow: var(--shadow-3);
   --clock-surface: var(--gray-10);
