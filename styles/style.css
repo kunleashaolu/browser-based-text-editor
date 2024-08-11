@@ -38,6 +38,11 @@ body {
         background-color: var(--surface-3);
       }
     }
+
+    &:has(p) {
+      align-self: center;
+      justify-self: center;
+    }
   }
 }
 
