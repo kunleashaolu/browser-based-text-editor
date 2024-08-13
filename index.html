@@ -32,7 +32,9 @@
               />
             </g>
             <defs>
-              <clipPath id="a"><path fill="var(--icon)" d="M0 0h15.56v15.814H0z" /></clipPath>
+              <clipPath id="a">
+                <path fill="var(--icon)" d="M0 0h15.56v15.814H0z" />
+              </clipPath>
             </defs>
           </svg>
         </span>
@@ -69,23 +71,25 @@
           </label>
         </div>
       </header>
-      <main contenteditable="true"></main>
+      <main id="text-area">
+        <h1 contenteditable="true" class="heading-1">Hello World!</h1>
+      </main>
       <div class="floating-menu">
         <ul class="menu-wrapper" role="list">
           <li class="menu-button">
             <button class="radius-left">
               <span>
-                <span id="selected-font-style">Heading 1</span>
+                <span id="selected-font-type">Heading 1</span>
                 <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 0L5 5L10 0H0Z" fill="var(--icon)" />
                 </svg>
               </span>
             </button>
-            <div id="font-style-options" class="menu-dropdown" role="list">
-              <label for="heading-1"><input type="radio" name="font-style" id="heading-1" value="Heading 1" />Heading 1</label>
-              <label for="heading-2"><input type="radio" name="font-style" id="heading-2" value="Heading 2" />Heading 2</label>
-              <label for="paragragh"><input type="radio" name="font-style" id="paragragh" value="Paragragh" />Paragraph</label>
-            </div>
+            <label role="radiogroup" for="font-type-option" id="font-type-options" class="menu-dropdown" role="list">
+              <label for="heading-1"><input type="radio" name="font-type-option" value="Heading 1" checked />Heading 1</label>
+              <label for="heading-2"><input type="radio" name="font-type-option" value="Heading 2" />Heading 2</label>
+              <label for="paragragh"><input type="radio" name="font-type-option" value="Paragragh" />Paragraph</label>
+            </label>
           </li>
           <li class="menu-button">
             <button>
@@ -98,7 +102,9 @@
                   />
                 </g>
                 <defs>
-                  <clipPath id="a"><path fill="var(--icon)" d="M.709.01h11.61v13.975H.71z" /></clipPath>
+                  <clipPath id="a">
+                    <path fill="var(--icon)" d="M.709.01h11.61v13.975H.71z" />
+                  </clipPath>
                 </defs>
               </svg>
             </button>
@@ -136,7 +142,9 @@
                   />
                 </g>
                 <defs>
-                  <clipPath id="a"><path fill="var(--icon)" d="M.924.01h10.118v13.975H.925z" /></clipPath>
+                  <clipPath id="a">
+                    <path fill="var(--icon)" d="M.924.01h10.118v13.975H.925z" />
+                  </clipPath>
                 </defs>
               </svg>
             </button>
@@ -152,7 +160,9 @@
                   />
                 </g>
                 <defs>
-                  <clipPath id="a"><path fill="var(--icon)" d="M.627.01H16.75v14.482H.627z" /></clipPath>
+                  <clipPath id="a">
+                    <path fill="var(--icon)" d="M.627.01H16.75v14.482H.627z" />
+                  </clipPath>
                 </defs>
               </svg>
             </button>
@@ -196,7 +206,7 @@
           <li class="menu-button">
             <button class="radius-right">
               <span>
-                <span id="selected-align-style">
+                <span id="text-align-style">
                   <svg width="21" height="17" viewBox="0 0 21 17" fill="var(--icon)" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_2_14876)">
                       <path
@@ -217,7 +227,7 @@
                 </svg>
               </span>
             </button>
-            <div id="" class="menu-dropdown" role="list">
+            <div id="text-align-options" class="menu-dropdown" role="list">
               <label>
                 <svg width="21" height="17" viewBox="0 0 21 17" fill="var(--icon)" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_2_14876)">
