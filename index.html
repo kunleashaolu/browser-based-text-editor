@@ -77,7 +77,7 @@
       <div class="floating-menu">
         <ul class="menu-wrapper" role="list">
           <li class="menu-button">
-            <button class="radius-left">
+            <button class="radius-left" id="select-font-type-btn">
               <span>
                 <span id="selected-font-type">Heading 1</span>
                 <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,11 +85,11 @@
                 </svg>
               </span>
             </button>
-            <label role="radiogroup" for="font-type-option" id="font-type-options" class="menu-dropdown" role="list">
-              <label for="heading-1"><input type="radio" name="font-type-option" value="Heading 1" checked />Heading 1</label>
-              <label for="heading-2"><input type="radio" name="font-type-option" value="Heading 2" />Heading 2</label>
-              <label for="paragragh"><input type="radio" name="font-type-option" value="Paragragh" />Paragraph</label>
-            </label>
+            <div id="font-type-options" class="menu-dropdown">
+              <label><input type="radio" name="font-type-option" value="Heading 1" />Heading 1</label>
+              <label><input type="radio" name="font-type-option" value="Heading 2" />Heading 2</label>
+              <label><input type="radio" name="font-type-option" value="Paragragh" />Paragraph</label>
+            </div>
           </li>
           <li class="menu-button">
             <button>
