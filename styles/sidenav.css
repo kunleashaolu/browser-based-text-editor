@@ -1,0 +1,36 @@
+.sidenav {
+  width: 20vw;
+  background: var(--surface-2);
+  padding-bottom: 20px;
+  display: none;
+
+  ul {
+    align-self: flex-end;
+    display: grid;
+    height: fit-content;
+
+    li {
+      padding: 0.5em 0.8em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      & > a {
+        text-decoration: none;
+      }
+
+      &:hover {
+        background-color: var(--surface-3);
+      }
+    }
+
+    &:has(p) {
+      align-self: center;
+      justify-self: center;
+    }
+  }
+}
+
+.sidenav[opened] {
+  display: grid;
+}
