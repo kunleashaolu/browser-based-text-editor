@@ -1,0 +1,45 @@
+.clock {
+  /* general clock vars */
+  --hour-hand-color: var(--clock-hand-1);
+  --hour-hand-degrees: 0deg;
+  --minute-hand-color: var(--clock-hand-1);
+  --minute-hand-degrees: 0deg;
+  --second-hand-color: var(--clock-hand-2);
+  --second-hand-degrees: 0deg;
+
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--clock-surface);
+  border: 1px solid var(--clock-border);
+}
+
+.hand {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  height: 45%;
+  width: 0.6px;
+  background: var(--second-hand-color);
+  transform-origin: bottom center;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.second-hand {
+  width: 0.3px;
+  transform: rotate(var(--second-hand-degrees));
+}
+
+.hour-hand {
+  height: 36%;
+  border-radius: 40px;
+  background-color: var(--hour-hand-color);
+  transform: rotate(var(--hour-hand-degrees));
+}
+
+.minute-hand {
+  height: 42%;
+  background: var(--minute-hand-color);
+  transform: rotate(var(--minute-hand-degrees));
+}
