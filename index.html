@@ -71,10 +71,8 @@
           </label>
         </div>
       </header>
-      <main id="text-area">
-        <h1 contenteditable="true" class="heading-1">Hello World!</h1>
-      </main>
-      <div class="floating-menu">
+      <main id="text-area"></main>
+      <div class="tools-menu">
         <ul class="menu-wrapper" role="list">
           <li class="menu-button">
             <button class="radius-left" id="select-font-type-btn">
@@ -90,6 +88,7 @@
               <label><input type="radio" name="font-type-option" value="Heading 2" />Heading 2</label>
               <label><input type="radio" name="font-type-option" value="Paragragh" />Paragraph</label>
             </div>
+            <div id="menu-overlay" class="menu-overlay"></div>
           </li>
           <li class="menu-button">
             <button>
@@ -206,7 +205,7 @@
           <li class="menu-button">
             <button class="radius-right">
               <span>
-                <span id="text-align-style">
+                <span id="selected-text-align-style">
                   <svg width="21" height="17" viewBox="0 0 21 17" fill="var(--icon)" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_2_14876)">
                       <path
@@ -229,6 +228,7 @@
             </button>
             <div id="text-align-options" class="menu-dropdown" role="list">
               <label>
+                <input type="radio" name="text-align-option" value="align-" />
                 <svg width="21" height="17" viewBox="0 0 21 17" fill="var(--icon)" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_2_14876)">
                     <path
@@ -245,6 +245,7 @@
                 </svg>
               </label>
               <label>
+                <input type="radio" name="text-align-option" value="align-" />
                 <svg width="21" height="17" viewBox="0 0 21 17" fill="var(--icon)" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_2_14880)">
                     <path
@@ -261,6 +262,7 @@
                 </svg>
               </label>
               <label>
+                <input type="radio" name="text-align-option" value="align-" />
                 <svg width="20" height="17" viewBox="0 0 20 17" fill="var(--icon)" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_2_14884)">
                     <path
