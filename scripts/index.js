@@ -1,14 +1,14 @@
-const selectedFontType = document.getElementById('selected-font-type')
-const fontTypeOptions = document.getElementById('font-type-options')
-const selectFontTypeBtn = document.getElementById('select-font-type-btn')
-const selectTextAlignBtn = document.getElementById('select-text-align-btn')
+const selected_font_type = document.getElementById('selected-font-type')
+const font_type_options = document.getElementById('font-type-options')
+const select_font_type_button = document.getElementById('select-font-type-btn')
+const select_text_align_button = document.getElementById('select-text-align-btn')
 const selectedAlignStyle = document.getElementById('selected-text-align-style')
-const textAlignOptions = document.getElementById('text-align-options')
-const themeSwitch = document.getElementById('theme-switch')
-const notesToggleBtn = document.getElementById('notes-toggle')
-const notesSidenav = document.getElementById('notes-sidenav')
+const text_align_options = document.getElementById('text-align-options')
+const theme_switch = document.getElementById('theme-switch')
+const notes_toggle_button = document.getElementById('notes-toggle')
+const notes_sidenav = document.getElementById('notes-sidenav')
 const textArea = document.getElementById('text-area')
-const menuOverlay = document.getElementById('menu-overlay')
+const menu_overlay = document.getElementById('menu-overlay')
 
 // get the first element of the node
 const screen = document.firstElementChild
@@ -16,23 +16,33 @@ function setTheme(theme) {
   screen.setAttribute('color-scheme', theme)
 }
 
-function onFontTypeChange(value) {
-  selectedFontType.innerHTML = value
-  fontTypeOptions.removeAttribute('visible')
+function setElementAttribute(e, a) {
+  e.setAttribute(a, '')
 }
 
-selectTextAlignBtn.addEventListener('click', () => textAlignOptions.setAttribute('visible', ''))
-textAlignOptions.addEventListener('click', (e) => console.log(e.target.value))
+function removeElementAttribute(e, a) {
+  e.removeAttribute(a)
+}
 
-fontTypeOptions.addEventListener('click', (e) => onFontTypeChange(e.target.value))
-selectFontTypeBtn.addEventListener('click', () => fontTypeOptions.setAttribute('visible', ''))
-menuOverlay.addEventListener('click', () => fontTypeOptions.removeAttribute('visible'))
+function onFontTypeChange(value) {
+  selected_font_type.innerHTML = value
+  removeElementAttribute(font_type_options, 'visible')
+}
 
 // toggle notes sidebar
-notesToggleBtn.addEventListener('click', () => {
-  const isOpen = notesSidenav.hasAttribute('opened')
-  isOpen ? notesSidenav.removeAttribute('opened') : notesSidenav.setAttribute('opened', '')
+notes_toggle_button.addEventListener('click', () => {
+  const isOpen = notes_sidenav.hasAttribute('opened')
+  isOpen ? removeElementAttribute(notes_sidenav, 'opened') : setElementAttribute(notes_sidenav, 'opened')
 })
 
 // set color scheme attribute on change
-themeSwitch.addEventListener('change', (e) => (e.target.checked ? setTheme('dark') : setTheme('light')))
+theme_switch.addEventListener('change', (e) => (e.target.checked ? setTheme('dark') : setTheme('light')))
+
+// select font type option
+font_type_options.addEventListener('click', (e) => onFontTypeChange(e.target.value))
+select_font_type_button.addEventListener('click', () => setElementAttribute(font_type_options, 'visible'))
+menu_overlay.addEventListener('click', () => removeElementAttribute(font_type_options, 'visible'))
+
+//select text align option
+select_text_align_button.addEventListener('click', () => setElementAttribute(text_align_options, 'visible'))
+text_align_options.addEventListener('click', (e) => console.log(e.target.value))
