@@ -30,7 +30,8 @@
       gap: 8px;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: var(--surface-3);
     }
   }
@@ -55,9 +56,7 @@
   display: none;
   gap: 6px;
   bottom: 120%;
-  left: 0;
   z-index: 200;
-  min-width: 8ch;
 
   label {
     position: relative;
@@ -97,10 +96,10 @@
 }
 
 #selected-font-type {
-  min-width: 8ch;
+  min-width: 7ch;
 }
 
-/* #selected-align-style {
+#selected-align-style {
   display: grid;
   align-items: center;
-} */
+}

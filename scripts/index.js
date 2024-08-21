@@ -1,6 +1,9 @@
 const selectedFontType = document.getElementById('selected-font-type')
 const fontTypeOptions = document.getElementById('font-type-options')
 const selectFontTypeBtn = document.getElementById('select-font-type-btn')
+const selectTextAlignBtn = document.getElementById('select-text-align-btn')
+const selectedAlignStyle = document.getElementById('selected-text-align-style')
+const textAlignOptions = document.getElementById('text-align-options')
 const themeSwitch = document.getElementById('theme-switch')
 const notesToggleBtn = document.getElementById('notes-toggle')
 const notesSidenav = document.getElementById('notes-sidenav')
@@ -17,6 +20,9 @@ function onFontTypeChange(value) {
   selectedFontType.innerHTML = value
   fontTypeOptions.removeAttribute('visible')
 }
+
+selectTextAlignBtn.addEventListener('click', () => textAlignOptions.setAttribute('visible', ''))
+textAlignOptions.addEventListener('click', (e) => console.log(e.target.value))
 
 fontTypeOptions.addEventListener('click', (e) => onFontTypeChange(e.target.value))
 selectFontTypeBtn.addEventListener('click', () => fontTypeOptions.setAttribute('visible', ''))
