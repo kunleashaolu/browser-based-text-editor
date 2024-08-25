@@ -13,8 +13,6 @@
 }
 
 .menu-button {
-  /* position: relative; */
-
   button {
     min-height: 40px;
     padding-inline: 14px;
@@ -28,6 +26,10 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
+
+      & > span {
+        display: inline-flex;
+      }
     }
 
     &:hover,
@@ -54,13 +56,13 @@
   border-radius: 8px;
   overflow: hidden;
   display: none;
-  gap: 6px;
+  /* gap: 6px; */
   bottom: 120%;
   z-index: 200;
 
   label {
     position: relative;
-    padding: 8px 14px;
+    padding: 10px 14px;
     cursor: pointer;
 
     &:hover {
@@ -97,9 +99,4 @@
 
 #selected-font-type {
   min-width: 7ch;
-}
-
-#selected-align-style {
-  display: grid;
-  align-items: center;
 }
