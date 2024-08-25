@@ -1,65 +1,115 @@
 :root {
   color-scheme: light;
 
-  --surface: var(--gray-0);
-  --surface-2: var(--gray-1);
-  --surface-3: var(--stone-2);
-  --surface-shadow: var(--shadow-5);
-  --light-shadow: var(--shadow-3);
-  --clock-surface: var(--gray-0);
-  --clock-hand-1: var(--stone-7);
-  --clock-hand-2: var(--stone-5);
-  --clock-border: var(--stone-5);
-  --border: var(--gray-6);
-  --icon: var(--gray-12);
+  --shadow-color: 220 40% 2%;
+  --shadow-strength: 10%;
+
+  --surface: #f8f9fa;
+  --surface-2: #f1f3f5;
+  --surface-3: #ebedef;
+  --clock-surface: #f8f9fa;
+  --clock-hand-1: #7e8282;
+  --clock-hand-2: #b1b6b9;
+  --clock-border: #b1b6b9;
+  --border: #868e96;
+  --icon: #030507;
+
+  --surface-shadow: 0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+    0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+    0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+    0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
+
+  --light-shadow: 0 -1px 3px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+    0 1px 2px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+    0 2px 5px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+    0 4px 12px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+    0 12px 15px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
 
-    --surface: var(--gray-12);
-    --surface-2: var(--gray-10);
-    --surface-3: var(--gray-9);
-    --surface-shadow: var(--shadow-5);
-    --light-shadow: var(--shadow-3);
-    --clock-surface: var(--gray-10);
-    --clock-hand-1: var(--stone-4);
-    --clock-hand-2: var(--stone-3);
-    --clock-border: var(--stone-3);
-    --border: var(--gray-3);
-    --icon: var(--gray-0);
+    --surface: #030507;
+    --surface-2: #16191d;
+    --surface-3: #212529;
+    --clock-surface: #16191d;
+    --clock-hand-1: #d1d6d8;
+    --clock-hand-2: #e0e4e5;
+    --clock-border: #e0e4e5;
+    --border: #dee2e6;
+    --icon: #f8f9fa;
+
+    --surface-shadow: 0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+      0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+      0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+      0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+      0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+      0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
+
+    --light-shadow: 0 -1px 3px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+      0 1px 2px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+      0 2px 5px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+      0 4px 12px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+      0 12px 15px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
   }
 }
 
 [color-scheme='light'] {
   color-scheme: light;
 
-  --surface: var(--gray-0);
-  --surface-2: var(--gray-1);
-  --surface-3: var(--stone-2);
-  --surface-shadow: var(--shadow-5);
-  --light-shadow: var(--shadow-3);
-  --clock-surface: var(--gray-0);
-  --clock-hand-1: var(--stone-7);
-  --clock-hand-2: var(--stone-5);
-  --clock-border: var(--stone-5);
-  --border: var(--gray-6);
-  --icon: var(--gray-12);
+  --shadow-color: 220 40% 2%;
+  --shadow-strength: 10%;
+
+  --surface: #f8f9fa;
+  --surface-2: #f1f3f5;
+  --surface-3: #ebedef;
+  --clock-surface: #f8f9fa;
+  --clock-hand-1: #7e8282;
+  --clock-hand-2: #b1b6b9;
+  --clock-border: #b1b6b9;
+  --border: #868e96;
+  --icon: #030507;
+
+  --surface-shadow: 0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+    0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+    0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+    0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
+
+  --light-shadow: 0 -1px 3px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+    0 1px 2px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+    0 2px 5px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+    0 4px 12px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+    0 12px 15px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
 }
 
 [color-scheme='dark'] {
   color-scheme: dark;
 
-  --surface: var(--gray-12);
-  --surface-2: var(--gray-10);
-  --surface-3: var(--gray-9);
-  --surface-shadow: var(--shadow-5);
-  --light-shadow: var(--shadow-3);
-  --clock-surface: var(--gray-10);
-  --clock-hand-1: var(--stone-4);
-  --clock-hand-2: var(--stone-3);
-  --clock-border: var(--stone-3);
-  --border: var(--gray-3);
-  --icon: var(--gray-0);
+  --surface: #030507;
+  --surface-2: #16191d;
+  --surface-3: #212529;
+  --clock-surface: #16191d;
+  --clock-hand-1: #d1d6d8;
+  --clock-hand-2: #e0e4e5;
+  --clock-border: #e0e4e5;
+  --border: #dee2e6;
+  --icon: #f8f9fa;
+
+  --surface-shadow: 0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+    0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+    0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+    0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
+
+  --light-shadow: 0 -1px 3px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+    0 1px 2px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+    0 2px 5px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+    0 4px 12px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+    0 12px 15px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
 }
