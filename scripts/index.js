@@ -16,12 +16,12 @@ function setTheme(theme) {
   screen.setAttribute('color-scheme', theme)
 }
 
-function setElementAttribute(e, a) {
-  e.setAttribute(a, '')
+function setElementAttribute(_element, _attribute) {
+  _element.setAttribute(_attribute, '')
 }
 
-function removeElementAttribute(e, a) {
-  e.removeAttribute(a)
+function removeElementAttribute(_element, _attribute) {
+  _element.removeAttribute(_attribute)
 }
 
 function onFontTypeChange(value) {
@@ -30,10 +30,12 @@ function onFontTypeChange(value) {
 }
 
 // toggle notes sidebar
-notes_toggle_button.addEventListener('click', () => {
+function openNotes() {
   const isOpen = notes_sidenav.hasAttribute('opened')
-  isOpen ? removeElementAttribute(notes_sidenav, 'opened') : setElementAttribute(notes_sidenav, 'opened')
-})
+  if (isOpen) {
+    removeElementAttribute(notes_sidenav, 'opened')
+  } else setElementAttribute(notes_sidenav, 'opened')
+}
 
 // set color scheme attribute on change
 theme_switch.addEventListener('change', (e) => (e.target.checked ? setTheme('dark') : setTheme('light')))
@@ -41,9 +43,6 @@ theme_switch.addEventListener('change', (e) => (e.target.checked ? setTheme('dar
 // select font type option
 font_type_options.addEventListener('click', (e) => onFontTypeChange(e.target.value))
 select_font_type_button.addEventListener('click', () => setElementAttribute(font_type_options, 'visible'))
-
-menu_overlay[0].addEventListener('click', () => removeElementAttribute(font_type_options, 'visible'))
-menu_overlay[1].addEventListener('click', () => removeElementAttribute(text_align_options, 'visible'))
 
 //select text align option
 select_text_align_button.addEventListener('click', () => setElementAttribute(text_align_options, 'visible'))
@@ -54,3 +53,6 @@ text_align_options.addEventListener('change', (e) => {
 
   removeElementAttribute(text_align_options, 'visible')
 })
+
+menu_overlay[0].addEventListener('click', () => removeElementAttribute(font_type_options, 'visible'))
+menu_overlay[1].addEventListener('click', () => removeElementAttribute(text_align_options, 'visible'))

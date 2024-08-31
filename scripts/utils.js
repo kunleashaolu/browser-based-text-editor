@@ -16,6 +16,14 @@ export function textAlign(position) {}
 
 export function textStyle() {}
 
+export function setElementAttribute(_element, _attribute) {
+  _element.setAttribute(_attribute, '')
+}
+
+export function removeElementAttribute(_element, _attribute) {
+  _element.removeAttribute(_attribute)
+}
+
 export function createElement(element) {
   return `<${element} contenteditable="true"></${element}>`
 }
