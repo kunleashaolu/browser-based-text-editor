@@ -1,0 +1,28 @@
+.header {
+  background-color: var(--surface);
+  padding-block: 12px;
+  padding-inline: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0px;
+}
+
+.header .title {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  height: min-content;
+}
+
+.title p {
+  padding-inline: 4px;
+  outline: none;
+  font-weight: 500;
+
+  &:focus {
+    border-bottom: 1px solid var(--border);
+  }
+}
