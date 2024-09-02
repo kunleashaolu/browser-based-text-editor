@@ -4,7 +4,6 @@ const select_font_type_button = document.getElementById('select-font-type-btn')
 const select_text_align_button = document.getElementById('select-text-align-btn')
 const selected_align_style = document.getElementById('selected-text-align-style')
 const text_align_options = document.getElementById('text-align-options')
-const theme_switch = document.getElementById('theme-switch')
 const notes_toggle_button = document.getElementById('notes-toggle')
 const notes_sidenav = document.getElementById('notes-sidenav')
 const textArea = document.getElementById('text-area')
@@ -38,7 +37,14 @@ function openNotes() {
 }
 
 // set color scheme attribute on change
-theme_switch.addEventListener('change', (e) => (e.target.checked ? setTheme('dark') : setTheme('light')))
+function switchTheme(e) {
+  const element = document.getElementById(e.getAttribute('id'))
+  const radioBtn = element.firstElementChild
+
+  if (radioBtn.checked) {
+    setTheme('dark')
+  } else setTheme('light')
+}
 
 // select font type option
 font_type_options.addEventListener('click', (e) => onFontTypeChange(e.target.value))

@@ -39,7 +39,7 @@
           </svg>
         </span>
         <div class="theme-toggle">
-          <label id="theme-switch" for="theme-toggle">
+          <label id="theme-switch" for="theme-toggle" onclick="switchTheme(this)">
             <input class="toggle" type="checkbox" id="theme-toggle" />
             <svg class="sun" width="23" height="22" viewBox="0 0 23 22" fill="var(--icon)" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_2_17316)">
@@ -283,7 +283,7 @@
           </li>
         </ul>
       </div>
-      <button class="notes-sidebar-toggle" id="notes-toggle">
+      <button class="notes-sidebar-toggle" id="notes-toggle" onclick="openNotes()">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--icon)" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_17_17457)">
             <path
@@ -300,6 +300,6 @@
       </button>
     </div>
     <script src="./scripts/clock.js"></script>
-    <script src="./scripts/index.js" type="module"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
