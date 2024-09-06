@@ -1,5 +1,7 @@
 .sidenav {
-  width: 20vw;
+  container-name: sidebar;
+  container-type: inline-size;
+  width: 25vw;
   background: var(--surface-2);
   padding-bottom: 20px;
   display: none;
@@ -14,6 +16,7 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      cursor: pointer;
 
       & > a {
         text-decoration: none;
