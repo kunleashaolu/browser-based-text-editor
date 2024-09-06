@@ -1,0 +1,35 @@
+:root {
+  /* Perfect Fourth */
+  --type-ratio: 1.33;
+
+  /*  Body font size  */
+  --base-font-size: 1rem;
+
+  /* Compounded headlines sizes */
+  --font-size-paragraph: calc(var(--base-font-size) * var(--type-ratio));
+  --font-size-header-2: calc(var(--font-size-paragraph) * var(--type-ratio));
+  --font-size-header-1: calc(var(--font-size-header-2) * var(--type-ratio));
+}
+
+h1 {
+  --font-size: var(--font-size-header-1);
+  font-size: var(--font-size);
+}
+
+h2 {
+  --font-size: var(--font-size-header-2);
+  font-size: var(--font-size);
+}
+
+p {
+  --font-size: var(--font-size-paragraph);
+  font-size: var(--font-size);
+}
+
+@supports (font-size: 1cqi) {
+  :is(h1, h2, p) {
+    --_font-min: var(--font-size) - var(--font-size) * var(--font-size-diff, 0.3);
+
+    font-size: clamp(max(var(--body-font-size), var(--_font-min)), var(--_font-min) + 1cqi, var(--font-size));
+  }
+}
