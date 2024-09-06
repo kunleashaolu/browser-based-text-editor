@@ -1,6 +1,7 @@
 /* @import 'https://unpkg.com/open-props'; */
 @import 'reset.css';
 @import 'theme.css';
+@import 'fontstyles.css';
 @import 'header.css';
 @import 'buttons.css';
 @import 'clock.css';
@@ -12,6 +13,7 @@ body {
   background-color: var(--surface);
   font-family: 'Satoshi', sans-serif;
   display: grid;
+  font-size: clamp(1rem, 0.7rem + 0.3cqi, 1.5rem);
 
   &:has(.sidenav[opened]) {
     grid-template-columns: max-content 1fr;
@@ -19,12 +21,14 @@ body {
 }
 
 .main-container {
+  container-name: main-container;
+  container-type: inline-size;
   display: grid;
   grid-template-rows: max-content 1fr;
 }
 
 main {
-  width: min(90ch, 80vw);
+  width: min(90ch, 75vw);
   justify-self: center;
   padding-top: 1em;
   outline: none;
