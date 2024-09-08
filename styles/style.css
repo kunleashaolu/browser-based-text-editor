@@ -9,11 +9,14 @@
 @import 'toolsmenu.css';
 
 body {
+  container-name: body;
+  container-type: inline-size;
   position: relative;
   background-color: var(--surface);
   font-family: 'Satoshi', sans-serif;
   display: grid;
   font-size: clamp(1rem, 0.7rem + 0.3cqi, 1.5rem);
+  grid-template-columns: 1fr;
 
   &:has(.sidenav[opened]) {
     grid-template-columns: max-content 1fr;
@@ -28,8 +31,23 @@ body {
 }
 
 main {
-  width: min(90ch, 75vw);
+  container-name: editor;
+  container-type: inline-size;
+  width: min(90ch, 70vw);
+  margin-inline: 12px;
   justify-self: center;
   padding-top: 1em;
   outline: none;
+}
+
+@container body (max-width: 780px) {
+  .sidenav {
+    width: 80vw;
+  }
+}
+
+@container main-container (max-width: 590px) {
+  .tools-menu {
+    display: none;
+  }
 }
