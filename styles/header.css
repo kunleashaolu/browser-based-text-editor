@@ -17,7 +17,7 @@
   height: min-content;
 }
 
-.title p {
+.title span {
   padding-inline: 4px;
   outline: none;
   font-weight: 500;
