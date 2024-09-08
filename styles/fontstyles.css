@@ -3,7 +3,7 @@
   --type-ratio: 1.33;
 
   /*  Body font size  */
-  --base-font-size: 1rem;
+  --base-font-size: 0.8rem;
 
   /* Compounded headlines sizes */
   --font-size-paragraph: calc(var(--base-font-size) * var(--type-ratio));
