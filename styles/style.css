@@ -15,7 +15,7 @@ body {
   background-color: var(--surface);
   font-family: 'Satoshi', sans-serif;
   display: grid;
-  font-size: clamp(1rem, 0.7rem + 0.3cqi, 1.5rem);
+  font-size: clamp(1rem, 0.7rem + 0.3cqw, 1.5rem);
   grid-template-columns: 1fr;
 
   &:has(.sidenav[opened]) {
@@ -34,9 +34,9 @@ main {
   container-name: editor;
   container-type: inline-size;
   width: min(90ch, 70vw);
-  margin-inline: 12px;
   justify-self: center;
   padding-top: 1em;
+  padding-inline: 4cqw;
   outline: none;
 }
 
@@ -49,5 +49,9 @@ main {
 @container main-container (max-width: 590px) {
   .tools-menu {
     display: none;
+  }
+
+  main {
+    width: 100%;
   }
 }
