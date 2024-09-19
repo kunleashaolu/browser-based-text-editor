@@ -1,4 +1,4 @@
-.tools-menu {
+.tools-menu-container {
   justify-self: center;
   position: fixed;
   bottom: 20px;
@@ -6,46 +6,46 @@
   background-color: var(--surface-2);
   border-radius: 8px;
   z-index: 20;
-}
 
-.menu-wrapper {
-  display: flex;
-}
+  .menu-wrapper {
+    display: flex;
 
-.menu-button {
-  button {
-    min-height: 40px;
-    padding-inline: 14px;
-    background: none;
-    border: none;
-    display: grid;
-    align-items: center;
+    .menu-button {
+      button {
+        min-height: 40px;
+        padding-inline: 14px;
+        background: none;
+        border: none;
+        display: grid;
+        align-items: center;
 
-    & > span {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
+        & > span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
 
-      & > span {
-        display: inline-flex;
+          & > span {
+            display: inline-flex;
+          }
+        }
+
+        &:hover,
+        &:focus {
+          background-color: var(--surface-3);
+        }
+      }
+
+      .radius-left {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+
+      .radius-right {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
       }
     }
-
-    &:hover,
-    &:focus {
-      background-color: var(--surface-3);
-    }
-  }
-
-  .radius-left {
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-  }
-
-  .radius-right {
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
   }
 }
 
@@ -78,10 +78,6 @@
   }
 }
 
-.menu-dropdown[visible] {
-  display: grid;
-}
-
 .menu-overlay {
   display: none;
   position: fixed;
@@ -91,6 +87,10 @@
   right: 0;
   background-color: transparent;
   z-index: 100;
+}
+
+.menu-dropdown[visible] {
+  display: grid;
 }
 
 .menu-dropdown[visible] ~ .menu-overlay {

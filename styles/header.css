@@ -7,22 +7,23 @@
   justify-content: space-between;
   position: sticky;
   top: 0px;
-}
+  min-width: 275px;
 
-.header .title {
-  display: flex;
-  gap: 4px;
-  justify-content: center;
-  align-items: center;
-  height: min-content;
-}
+  .title {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    height: min-content;
 
-.title span {
-  padding-inline: 4px;
-  outline: none;
-  font-weight: 500;
+    span {
+      padding-inline: 4px;
+      outline: none;
+      font-weight: 500;
 
-  &:focus {
-    border-bottom: 1px solid var(--border);
+      &:focus {
+        border-bottom: 1px solid var(--border);
+      }
+    }
   }
 }

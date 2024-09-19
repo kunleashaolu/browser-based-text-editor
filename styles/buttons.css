@@ -1,4 +1,4 @@
-.theme-toggle label {
+.button-theme-toggle label {
   position: relative;
   cursor: pointer;
   display: grid;
@@ -15,35 +15,35 @@
     transform: translateY(-100%);
     display: none;
   }
+
+  .toggle {
+    position: absolute;
+    opacity: 0;
+    width: 1em;
+    height: 1em;
+
+    &:checked ~ .moon {
+      transform: translateY(0%);
+      display: block;
+    }
+
+    &:checked ~ .sun {
+      transform: translateY(100%);
+      display: none;
+    }
+  }
 }
 
-label .toggle {
-  position: absolute;
-  opacity: 0;
-  width: 1em;
-  height: 1em;
-
-  &:checked ~ .moon {
-    transform: translateY(0%);
-    display: block;
-  }
-
-  &:checked ~ .sun {
-    transform: translateY(100%);
-    display: none;
-  }
-}
-
-.notes-sidebar-toggle {
+.button-notes-sidebar-toggle {
   display: grid;
   justify-self: start;
   position: fixed;
-  margin-inline: 12px;
+  left: 1em;
   bottom: 20px;
   border: none;
   border-radius: 50%;
   transition: 0.2s ease-in-out;
-  padding: 0.3em;
+  padding: 0.5em;
   align-items: center;
 
   &:hover {

@@ -11,6 +11,24 @@ const menu_overlay = document.getElementsByClassName('menu-overlay')
 
 // get the first element of the node
 const screen = document.firstElementChild
+
+// select font type option
+font_type_options.addEventListener('click', (e) => onFontTypeChange(e.target.value))
+select_font_type_button.addEventListener('click', () => setElementAttribute(font_type_options, 'visible'))
+
+//select text align option
+select_text_align_button.addEventListener('click', () => setElementAttribute(text_align_options, 'visible'))
+text_align_options.addEventListener('change', (e) => {
+  const svgIcon = e.target.nextElementSibling
+
+  selected_align_style.replaceChildren(svgIcon.cloneNode(true))
+
+  removeElementAttribute(text_align_options, 'visible')
+})
+
+menu_overlay[0].addEventListener('click', () => removeElementAttribute(font_type_options, 'visible'))
+menu_overlay[1].addEventListener('click', () => removeElementAttribute(text_align_options, 'visible'))
+
 function setTheme(theme) {
   screen.setAttribute('color-scheme', theme)
 }
@@ -45,20 +63,3 @@ function switchTheme(e) {
     setTheme('dark')
   } else setTheme('light')
 }
-
-// select font type option
-font_type_options.addEventListener('click', (e) => onFontTypeChange(e.target.value))
-select_font_type_button.addEventListener('click', () => setElementAttribute(font_type_options, 'visible'))
-
-//select text align option
-select_text_align_button.addEventListener('click', () => setElementAttribute(text_align_options, 'visible'))
-text_align_options.addEventListener('change', (e) => {
-  const svgIcon = e.target.nextElementSibling
-
-  selected_align_style.replaceChildren(svgIcon.cloneNode(true))
-
-  removeElementAttribute(text_align_options, 'visible')
-})
-
-menu_overlay[0].addEventListener('click', () => removeElementAttribute(font_type_options, 'visible'))
-menu_overlay[1].addEventListener('click', () => removeElementAttribute(text_align_options, 'visible'))
