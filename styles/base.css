@@ -9,19 +9,19 @@
 
 h1,
 .header-1 {
-  --font-size: var(--font-size-header-1);
+  --font-size: var(--font-size-2);
   font-size: var(--font-size);
 }
 
 h2,
 .header-2 {
-  --font-size: var(--font-size-header-2);
+  --font-size: var(--font-size-1);
   font-size: var(--font-size);
 }
 
 p,
 .paragraph {
-  --font-size: var(--font-size-paragraph);
+  --font-size: var(--font-size-0);
   font-size: var(--font-size);
 }
 
@@ -31,9 +31,9 @@ body {
   position: relative;
   background-color: var(--surface);
   font-family: 'Satoshi', sans-serif;
-  display: grid;
-  font-size: clamp(1rem, 0.7rem + 0.3cqw, 1.5rem);
   grid-template-columns: 1fr;
+  display: grid;
+  font-size: var(font-size-0);
 
   &:has(.sidenav[opened]) {
     grid-template-columns: max-content 1fr;
@@ -52,8 +52,8 @@ main {
   container-type: inline-size;
   width: min(90ch, 70vw);
   justify-self: center;
-  padding-top: 1em;
-  padding-inline: 16px;
+  padding-top: var(--space-fluid-2);
+  padding-inline: var(--space-fluid-2);
   outline: none;
 }
 
@@ -64,19 +64,11 @@ main {
 }
 
 @container main-container (max-width: 580px) {
-  .tools-menu {
+  .tools-menu-container {
     display: none;
   }
 
   main {
     width: 100%;
-  }
-}
-
-@supports (font-size: 1cqi) {
-  :is(h1, .header-1, h2, .header-2, .paragraph) {
-    --_font-min: var(--font-size) - var(--font-size) * var(--font-size-diff, 0.3);
-
-    font-size: clamp(max(var(--base-font-size), var(--_font-min)), var(--_font-min) + 1cqi, var(--font-size));
   }
 }

@@ -1,13 +1,13 @@
 .header {
   background-color: var(--surface);
-  padding-block: 12px;
-  padding-inline: 12px;
+  padding-block: var(--space-fluid-1);
+  padding-inline: var(--space-fluid-1);
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: sticky;
   top: 0px;
-  min-width: 275px;
+  min-width: 280px;
 
   .title {
     display: flex;

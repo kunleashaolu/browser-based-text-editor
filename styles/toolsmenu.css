@@ -1,7 +1,7 @@
 .tools-menu-container {
   justify-self: center;
   position: fixed;
-  bottom: 20px;
+  bottom: var(--space-fluid-2);
   box-shadow: var(--surface-shadow);
   background-color: var(--surface-2);
   border-radius: 8px;

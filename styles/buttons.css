@@ -5,7 +5,7 @@
   background-color: var(--surface-2);
   border-radius: 50%;
   min-width: 31px;
-  padding: 4px;
+  padding: 0.5em;
 
   svg {
     grid-area: -1/1;
@@ -38,8 +38,8 @@
   display: grid;
   justify-self: start;
   position: fixed;
-  left: 1em;
-  bottom: 20px;
+  left: var(--space-fluid-1);
+  bottom: var(--space-fluid-2);
   border: none;
   border-radius: 50%;
   transition: 0.2s ease-in-out;

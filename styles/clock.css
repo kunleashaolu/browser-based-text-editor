@@ -8,8 +8,8 @@
   --second-hand-degrees: 0deg;
 
   position: relative;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   background: var(--clock-surface);
   border: 1px solid var(--clock-border);

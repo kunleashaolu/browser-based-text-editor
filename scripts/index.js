@@ -9,15 +9,14 @@ const notes_sidenav = document.getElementById('notes-sidenav')
 const textArea = document.getElementById('text-area')
 const menu_overlay = document.getElementsByClassName('menu-overlay')
 
-// get the first element of the node
 const screen = document.firstElementChild
 
-// select font type option
 font_type_options.addEventListener('click', (e) => onFontTypeChange(e.target.value))
+
 select_font_type_button.addEventListener('click', () => setElementAttribute(font_type_options, 'visible'))
 
-//select text align option
 select_text_align_button.addEventListener('click', () => setElementAttribute(text_align_options, 'visible'))
+
 text_align_options.addEventListener('change', (e) => {
   const svgIcon = e.target.nextElementSibling
 
@@ -46,20 +45,15 @@ function onFontTypeChange(value) {
   removeElementAttribute(font_type_options, 'visible')
 }
 
-// toggle notes sidebar
 function openNotes() {
   const isOpen = notes_sidenav.hasAttribute('opened')
-  if (isOpen) {
-    removeElementAttribute(notes_sidenav, 'opened')
-  } else setElementAttribute(notes_sidenav, 'opened')
+
+  isOpen ? removeElementAttribute(notes_sidenav, 'opened') : setElementAttribute(notes_sidenav, 'opened')
 }
 
-// set color scheme attribute on change
 function switchTheme(e) {
   const element = document.getElementById(e.getAttribute('id'))
   const radioBtn = element.firstElementChild
 
-  if (radioBtn.checked) {
-    setTheme('dark')
-  } else setTheme('light')
+  radioBtn.checked ? setTheme('dark') : setTheme('light')
 }

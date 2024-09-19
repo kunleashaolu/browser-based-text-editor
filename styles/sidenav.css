@@ -3,7 +3,7 @@
   container-type: inline-size;
   width: 25vw;
   background: var(--surface-2);
-  padding-bottom: 20px;
+  padding-bottom: var(--space-fluid-2);
   display: none;
 
   ul {
