@@ -22,21 +22,7 @@
           <div class="hand hour-hand"></div>
         </div>
         <span class="title">
-          <span contenteditable="true">Untitled</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--icon)">
-            <g clip-path="url(#a)">
-              <path
-                fill="var(--icon)"
-                fill-opacity=".85"
-                d="M2.669 14.924 13.323 4.279 11.614 2.56.95 13.215l-.928 2.168c-.045.117-.02.226.073.327.095.1.2.128.318.083l2.256-.87ZM14.182 3.439l.987-.967c.247-.253.377-.507.39-.761.013-.254-.09-.495-.312-.723l-.332-.332c-.221-.221-.46-.322-.718-.303-.257.02-.51.15-.757.391l-.986.977 1.728 1.718Z"
-              />
-            </g>
-            <defs>
-              <clipPath id="a">
-                <path fill="var(--icon)" d="M0 0h15.56v15.814H0z" />
-              </clipPath>
-            </defs>
-          </svg>
+          <input class="input" type="text" placeholder="Untitled" />
         </span>
         <div class="button-theme-toggle">
           <label id="theme-switch" for="theme-toggle" onclick="switchTheme(this)">
@@ -71,11 +57,7 @@
           </label>
         </div>
       </header>
-      <main id="text-area">
-        <h1>Header 1</h1>
-        <h2>Header 2</h2>
-        <p>Paragraph</p>
-      </main>
+      <main id="text-area"></main>
       <div class="tools-menu-container">
         <ul class="menu-wrapper" role="list">
           <li class="menu-button">
@@ -88,9 +70,18 @@
               </span>
             </button>
             <div id="font-type-options" class="menu-dropdown">
-              <label><input type="radio" name="font-type-option" value="Heading 1" />Heading 1</label>
-              <label><input type="radio" name="font-type-option" value="Heading 2" />Heading 2</label>
-              <label><input type="radio" name="font-type-option" value="Paragragh" />Paragraph</label>
+              <label>
+                <input type="radio" name="font-type-option" value="Heading 1" />
+                <span>Heading 1</span>
+              </label>
+              <label>
+                <input type="radio" name="font-type-option" value="Heading 2" />
+                <span>Heading 2</span>
+              </label>
+              <label>
+                <input type="radio" name="font-type-option" value="Paragraph" />
+                <span>Paragraph</span>
+              </label>
             </div>
             <div id="menu-overlay" class="menu-overlay"></div>
           </li>
