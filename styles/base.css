@@ -25,6 +25,17 @@ p,
   font-size: var(--font-size);
 }
 
+h1,
+h2,
+p {
+  outline: none;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--surface-3);
+  }
+}
+
 body {
   container-name: body;
   container-type: inline-size;
