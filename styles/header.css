@@ -1,4 +1,6 @@
 .header {
+  container-name: header;
+  container-type: inline-size;
   background-color: var(--surface);
   padding-block: var(--space-fluid-1);
   padding-inline: var(--space-fluid-1);
@@ -10,14 +12,17 @@
   min-width: 280px;
 
   .title {
-    display: flex;
-    gap: 4px;
-    justify-content: center;
-    align-items: center;
+    gap: 0.8em;
+    display: inline-flex;
     height: min-content;
+    align-items: center;
+    width: fit-content;
 
-    span {
+    .input {
       padding-inline: 4px;
+      border: none;
+      background: transparent;
+      text-align: center;
       outline: none;
       font-weight: 500;
 
@@ -27,3 +32,5 @@
     }
   }
 }
+
+/* @container header (max-width: ); */

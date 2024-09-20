@@ -40,9 +40,16 @@ function removeElementAttribute(_element, _attribute) {
   _element.removeAttribute(_attribute)
 }
 
-function onFontTypeChange(value) {
-  selected_font_type.innerHTML = value
+function onFontTypeChange(e) {
+  selected_font_type.innerHTML = e
+
   removeElementAttribute(font_type_options, 'visible')
+
+  const _element = _createElement(e)
+  _element.setAttribute('contenteditable', true)
+  _element.innerText = e
+
+  textArea.appendChild(_element)
 }
 
 function openNotes() {
@@ -57,3 +64,18 @@ function switchTheme(e) {
 
   radioBtn.checked ? setTheme('dark') : setTheme('light')
 }
+
+function _createElement(_e) {
+  switch (_e) {
+    case 'Heading 1':
+      return document.createElement('h1')
+    case 'Heading 2':
+      return document.createElement('h2')
+    case 'Paragraph':
+      return document.createElement('p')
+    default:
+      return document.createElement('span')
+  }
+}
+
+function styleElement() {}
