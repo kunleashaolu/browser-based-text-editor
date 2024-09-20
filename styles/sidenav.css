@@ -1,10 +1,12 @@
 .sidenav {
+  top: 0;
   container-name: sidebar;
   container-type: inline-size;
   width: 25vw;
   background: var(--surface-2);
   padding-bottom: var(--space-fluid-2);
   display: none;
+  height: 100svh;
 
   ul {
     align-self: flex-end;
@@ -36,4 +38,5 @@
 
 .sidenav[opened] {
   display: grid;
+  position: sticky;
 }
