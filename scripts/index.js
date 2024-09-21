@@ -11,58 +11,25 @@ const menu_overlay = document.getElementsByClassName('menu-overlay')
 
 const screen = document.firstElementChild
 
-font_type_options.addEventListener('click', (e) => onFontTypeChange(e.target.value))
+select_font_type_button.addEventListener('click', () => _setAttr(font_type_options, 'visible'))
+select_text_align_button.addEventListener('click', () => _setAttr(text_align_options, 'visible'))
 
-select_font_type_button.addEventListener('click', () => setElementAttribute(font_type_options, 'visible'))
+font_type_options.addEventListener('click', (e) => onFontTypeChange(e))
+text_align_options.addEventListener('click', (e) => onFontStyleChange(e))
 
-select_text_align_button.addEventListener('click', () => setElementAttribute(text_align_options, 'visible'))
+menu_overlay[0].addEventListener('click', () => _removeAttr(font_type_options, 'visible'))
+menu_overlay[1].addEventListener('click', () => _removeAttr(text_align_options, 'visible'))
 
-text_align_options.addEventListener('change', (e) => {
-  const svgIcon = e.target.nextElementSibling
-
-  selected_align_style.replaceChildren(svgIcon.cloneNode(true))
-
-  removeElementAttribute(text_align_options, 'visible')
-})
-
-menu_overlay[0].addEventListener('click', () => removeElementAttribute(font_type_options, 'visible'))
-menu_overlay[1].addEventListener('click', () => removeElementAttribute(text_align_options, 'visible'))
-
-function setTheme(theme) {
+function _setTheme(theme) {
   screen.setAttribute('color-scheme', theme)
 }
 
-function setElementAttribute(_element, _attribute) {
+function _setAttr(_element, _attribute) {
   _element.setAttribute(_attribute, '')
 }
 
-function removeElementAttribute(_element, _attribute) {
+function _removeAttr(_element, _attribute) {
   _element.removeAttribute(_attribute)
-}
-
-function onFontTypeChange(e) {
-  selected_font_type.innerHTML = e
-
-  removeElementAttribute(font_type_options, 'visible')
-
-  const _element = _createElement(e)
-  _element.setAttribute('contenteditable', true)
-  _element.innerText = e
-
-  textArea.appendChild(_element)
-}
-
-function openNotes() {
-  const isOpen = notes_sidenav.hasAttribute('opened')
-
-  isOpen ? removeElementAttribute(notes_sidenav, 'opened') : setElementAttribute(notes_sidenav, 'opened')
-}
-
-function switchTheme(e) {
-  const element = document.getElementById(e.getAttribute('id'))
-  const radioBtn = element.firstElementChild
-
-  radioBtn.checked ? setTheme('dark') : setTheme('light')
 }
 
 function _createElement(_e) {
@@ -78,4 +45,32 @@ function _createElement(_e) {
   }
 }
 
-function styleElement() {}
+function onFontTypeChange(_e) {
+  const _v = _e.target.value
+  selected_font_type.innerHTML = _v
+
+  const _element = _createElement(_v)
+  _element.setAttribute('contenteditable', true)
+  _element.innerText = _v
+  textArea.appendChild(_element)
+
+  _removeAttr(font_type_options, 'visible')
+}
+
+function onFontStyleChange(_e) {
+  const svgIcon = _e.target.nextElementSibling
+  selected_align_style.replaceChildren(svgIcon.cloneNode(true))
+
+  _removeAttr(text_align_options, 'visible')
+}
+
+function openNotes() {
+  const isOpen = notes_sidenav.hasAttribute('opened')
+  isOpen ? _removeAttr(notes_sidenav, 'opened') : _setAttr(notes_sidenav, 'opened')
+}
+
+function switchTheme(_e) {
+  const element = document.getElementById(_e.getAttribute('id'))
+  const radioBtn = element.firstElementChild
+  radioBtn.checked ? _setTheme('dark') : _setTheme('light')
+}

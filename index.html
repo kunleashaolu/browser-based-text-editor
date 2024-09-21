@@ -57,7 +57,36 @@
           </label>
         </div>
       </header>
-      <main id="text-area"></main>
+      <main id="text-area">
+        <h1>IF - A Poem By Rudyard Kipling</h1>
+        <p contenteditable="true">
+          If … <br />
+          If you can keep your head when all about you are losing theirs and blaming it on you If you can trust yourself when all men doubt you, But
+          make allowance for their doubting too;<br />
+          <br />
+          If you can wait and not be tired by waiting, Or being lied about, don’t deal in lies, Or being hated, don’t give way to hating, And yet
+          don’t look too good, nor talk too wise;<br />
+          <br />
+          If you can dream and not make dreams your master;<br />
+          If you can think and not make thoughts your aim;<br />
+          <br />
+          If you can meet with Triumph and Disaster and treat those two impostors just the same;<br />
+          If you can bear to hear the truth you’ve spoken twisted by knaves to make a trap for fools, Or watch the things you gave your life to
+          broken, And stoop and build ’em up with worn out tools;<br />
+          <br />
+          If you can make one heap of all your winnings and risk it on one turn of pitch-and-toss, And lose, and start again at your beginnings and
+          never breathe a word about your loss;<br />
+          <br />
+          If you can force your heart and nerve and sinew to serve your turn long after they are gone, And so hold on when there is nothing in you
+          except the Will which says to them: ‘Hold on!’;<br />
+          <br />
+          If you can talk with crowds and keep your virtue, Or walk with kings nor lose the common touch, If neither foes nor loving friends can hurt
+          you, If all men count with you, but none too much;<br />
+          <br />
+          If you can fill the unforgiving minute with sixty seconds’ worth of distance run<br />
+          Yours is the Earth and everything that’s in it, and which is more you’ll be a Man my son!
+        </p>
+      </main>
       <div class="tools-menu-container">
         <ul class="menu-wrapper" role="list">
           <li class="menu-button">
@@ -86,7 +115,7 @@
             <div id="menu-overlay" class="menu-overlay"></div>
           </li>
           <li class="menu-button">
-            <button>
+            <button id="text-bold-button">
               <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="var(--icon)">
                 <g clip-path="url(#a)">
                   <path
@@ -104,7 +133,7 @@
             </button>
           </li>
           <li class="menu-button">
-            <button>
+            <button id="text-underline-button">
               <svg width="13" height="21" viewBox="0 0 13 21" fill="var(--icon)" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_2_14966)">
                   <path
@@ -126,7 +155,7 @@
             </button>
           </li>
           <li class="menu-button">
-            <button>
+            <button id="text-italics-button">
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" fill="var(--icon)">
                 <g clip-path="url(#a)">
                   <path
@@ -144,25 +173,7 @@
             </button>
           </li>
           <li class="menu-button">
-            <button>
-              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" fill="var(--icon)">
-                <g clip-path="url(#a)">
-                  <path
-                    fill="var(--icon)"
-                    fill-opacity=".85"
-                    d="M8.684 14.482c1.08 0 2.018-.174 2.813-.522.794-.348 1.41-.84 1.85-1.475.44-.634.66-1.375.66-2.221 0-1.016-.328-1.817-.982-2.403-.655-.586-1.704-1.048-3.15-1.386l-1.591-.381c-.996-.241-1.716-.528-2.159-.86-.442-.332-.664-.768-.664-1.308 0-.456.139-.86.415-1.211.277-.352.656-.627 1.138-.825.482-.199 1.035-.298 1.66-.298.56 0 1.063.081 1.509.244.446.163.825.402 1.138.718.312.316.55.698.713 1.147.156.365.416.547.78.547.255 0 .455-.07.601-.21.147-.14.22-.33.22-.571a1.71 1.71 0 0 0-.058-.45 3.299 3.299 0 0 0-.909-1.562c-.455-.45-1.027-.802-1.713-1.06C10.268.139 9.508.01 8.675.01c-.984 0-1.856.172-2.618.517-.762.345-1.359.822-1.792 1.431-.433.609-.65 1.307-.65 2.095 0 .963.313 1.738.938 2.324.625.586 1.602 1.035 2.93 1.348l1.797.43c1.015.247 1.75.55 2.202.908.452.358.679.83.679 1.416 0 .468-.149.885-.445 1.25-.296.364-.706.652-1.23.864-.524.211-1.125.317-1.802.317a4.818 4.818 0 0 1-1.64-.264 3.473 3.473 0 0 1-1.25-.761 3.116 3.116 0 0 1-.772-1.192c-.091-.214-.197-.37-.317-.463-.12-.095-.282-.142-.484-.142-.26 0-.467.075-.62.225-.153.15-.23.351-.23.605 0 .189.027.371.079.547a3.34 3.34 0 0 0 .986 1.601c.488.45 1.095.798 1.821 1.045.726.248 1.535.371 2.427.371ZM1.028 7.51H16.35c.11 0 .205-.04.283-.117a.386.386 0 0 0 .117-.284c0-.11-.039-.205-.117-.283a.386.386 0 0 0-.283-.117H1.028c-.11 0-.205.04-.283.117a.386.386 0 0 0-.118.283c0 .111.04.205.118.284a.386.386 0 0 0 .283.117Z"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="a">
-                    <path fill="var(--icon)" d="M.627.01H16.75v14.482H.627z" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </button>
-          </li>
-          <li class="menu-button">
-            <button>
+            <button id="text-uppercase-button">
               <svg width="39" height="15" viewBox="0 0 39 15" fill="var(--icon)" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_2_14945)">
                   <path
@@ -180,7 +191,7 @@
             </button>
           </li>
           <li class="menu-button">
-            <button>
+            <button id="text-lowercase-button">
               <svg width="31" height="15" viewBox="0 0 31 15" fill="var(--icon)" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_2_14949)">
                   <path
