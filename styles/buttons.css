@@ -35,6 +35,7 @@
 }
 
 .button-notes-sidebar-toggle {
+  height: fit-content;
   display: grid;
   justify-self: start;
   position: sticky;
@@ -46,6 +47,8 @@
   padding: 0.5em;
   align-items: center;
   z-index: 20;
+  grid-area: editor;
+  align-self: flex-end;
 
   &:hover {
     background: var(--surface-2);

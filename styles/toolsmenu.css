@@ -1,11 +1,14 @@
 .tools-menu-container {
   justify-self: center;
-  position: fixed;
-  bottom: var(--space-fluid-2);
+  position: sticky;
+  bottom: var(--space-fluid-1);
   box-shadow: var(--surface-shadow);
   background-color: var(--surface-2);
   border-radius: 8px;
   z-index: 20;
+  grid-area: editor;
+  height: fit-content;
+  align-self: flex-end;
 
   .menu-wrapper {
     display: flex;
