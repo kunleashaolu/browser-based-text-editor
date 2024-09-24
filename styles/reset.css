@@ -12,6 +12,12 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+  scrollbar-color: var(--icon) var(--clock-surface);
+  scroll-padding-inline: 2em;
+  scrollbar-arrow-color: var(--clock-surface);
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */

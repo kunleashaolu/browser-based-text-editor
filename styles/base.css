@@ -1,5 +1,5 @@
-@import 'reset.css';
 @import 'theme.css';
+@import 'reset.css';
 @import 'variables.css';
 @import 'clock.css';
 @import 'header.css';
@@ -36,7 +36,7 @@ h1,
 h2,
 p {
   outline: none;
-  padding-inline: 20cqw;
+  padding-inline: 18cqw;
 }
 
 body {
