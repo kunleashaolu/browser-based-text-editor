@@ -7,6 +7,21 @@
 @import 'toolsmenu.css';
 @import 'buttons.css';
 
+body {
+  container-name: body;
+  container-type: inline-size;
+  position: relative;
+  background-color: var(--surface);
+  font-family: 'Satoshi', sans-serif;
+  grid-template-columns: 1fr;
+  display: grid;
+  font-size: var(font-size-0);
+
+  &:has(.sidenav[opened]) {
+    grid-template-columns: max-content 1fr;
+  }
+}
+
 h1,
 .header-1 {
   --font-size: var(--font-size-2);
@@ -39,27 +54,12 @@ p {
   padding-inline: 18cqw;
 }
 
-body {
-  container-name: body;
+.main-container {
+  container-name: main-container;
   container-type: inline-size;
-  position: relative;
-  background-color: var(--surface);
-  font-family: 'Satoshi', sans-serif;
-  grid-template-columns: 1fr;
   display: grid;
-  font-size: var(font-size-0);
-
-  &:has(.sidenav[opened]) {
-    grid-template-columns: max-content 1fr;
-  }
-
-  .main-container {
-    container-name: main-container;
-    container-type: inline-size;
-    display: grid;
-    grid-template-rows: max-content 1fr;
-    grid-template-areas: 'header' 'editor';
-  }
+  grid-template-rows: max-content 1fr;
+  grid-template-areas: 'header' 'editor';
 }
 
 main {
@@ -72,6 +72,10 @@ main {
   padding-bottom: var(--space-fluid-5);
   outline: none;
   grid-area: editor;
+
+  & > :has(+ h1) {
+    margin-bottom: var(--space-fluid-4);
+  }
 }
 
 @container body (max-width: 780px) {
