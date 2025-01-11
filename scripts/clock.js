@@ -13,4 +13,3 @@ function setDate(e) {
 }
 
 setInterval(() => setDate(clock), 1000)
-setDate(clock)
