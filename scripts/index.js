@@ -8,29 +8,20 @@ const notes_toggle_button = document.getElementById('notes-toggle')
 const notes_sidenav = document.getElementById('notes-sidenav')
 const textArea = document.getElementById('text-area')
 const menu_overlay = document.getElementsByClassName('menu-overlay')
+const theme_switch_button = document.getElementById('theme-switch')
 
 const screen = document.firstElementChild
 
 select_font_type_button.addEventListener('click', () => _setAttr(font_type_options, 'visible'))
 select_text_align_button.addEventListener('click', () => _setAttr(text_align_options, 'visible'))
+notes_toggle_button.addEventListener('click', () => openNotes())
+theme_switch_button.addEventListener('click', (e) => switchTheme(e))
 
 font_type_options.addEventListener('click', (e) => onFontTypeChange(e))
 text_align_options.addEventListener('click', (e) => onFontStyleChange(e))
 
 menu_overlay[0].addEventListener('click', () => _removeAttr(font_type_options, 'visible'))
 menu_overlay[1].addEventListener('click', () => _removeAttr(text_align_options, 'visible'))
-
-function _setTheme(theme) {
-  screen.setAttribute('color-scheme', theme)
-}
-
-function _setAttr(_element, _attribute) {
-  _element.setAttribute(_attribute, '')
-}
-
-function _removeAttr(_element, _attribute) {
-  _element.removeAttribute(_attribute)
-}
 
 function _createElement(_e) {
   switch (_e) {
@@ -69,8 +60,19 @@ function openNotes() {
   isOpen ? _removeAttr(notes_sidenav, 'opened') : _setAttr(notes_sidenav, 'opened')
 }
 
-function switchTheme(_e) {
-  const element = document.getElementById(_e.getAttribute('id'))
-  const radioBtn = element.firstElementChild
-  radioBtn.checked ? _setTheme('dark') : _setTheme('light')
+function switchTheme(_element) {
+  const radioBtn = _element.quer
+  radioBtn.checked ? _setTheme(screen, 'dark') : _setTheme(screen, 'light')
+}
+
+function _setTheme(theme) {
+  screen.setAttribute('color-scheme', theme)
+}
+
+function _setAttr(_element, _attribute) {
+  _element.setAttribute(_attribute, '')
+}
+
+function _removeAttr(_element, _attribute) {
+  _element.removeAttribute(_attribute)
 }
