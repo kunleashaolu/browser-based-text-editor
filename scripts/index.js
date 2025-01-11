@@ -15,7 +15,7 @@ const screen = document.firstElementChild
 select_font_type_button.addEventListener('click', () => _setAttr(font_type_options, 'visible'))
 select_text_align_button.addEventListener('click', () => _setAttr(text_align_options, 'visible'))
 notes_toggle_button.addEventListener('click', () => openNotes())
-theme_switch_button.addEventListener('click', (e) => switchTheme(e))
+theme_switch_button.addEventListener('click', (e) => switchTheme(e.target))
 
 font_type_options.addEventListener('click', (e) => onFontTypeChange(e))
 text_align_options.addEventListener('click', (e) => onFontStyleChange(e))
@@ -41,8 +41,9 @@ function onFontTypeChange(_e) {
   selected_font_type.innerHTML = _v
 
   const _element = _createElement(_v)
-  _element.setAttribute('contenteditable', true)
   _element.innerText = _v
+  _element.setAttribute('class', 'text-box')
+  _element.setAttribute('contenteditable', 'true')
   textArea.appendChild(_element)
 
   _removeAttr(font_type_options, 'visible')
@@ -61,8 +62,7 @@ function openNotes() {
 }
 
 function switchTheme(_element) {
-  const radioBtn = _element.quer
-  radioBtn.checked ? _setTheme(screen, 'dark') : _setTheme(screen, 'light')
+  _element.checked ? _setTheme('dark') : _setTheme('light')
 }
 
 function _setTheme(theme) {
