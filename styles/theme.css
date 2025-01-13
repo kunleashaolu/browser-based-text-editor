@@ -8,12 +8,15 @@
   --surface-2: #f1f3f5;
   --surface-3: #ebedef;
   --surface-4: #ced4da;
+  --gray-1: #adb5bd;
+  --gray-2: #212529;
   --clock-surface: #f8f9fa;
   --clock-hand-1: #7e8282;
   --clock-hand-2: #b1b6b9;
   --clock-border: #b1b6b9;
   --border: #868e96;
   --icon: #030507;
+  --red: #e03131;
 
   --surface-shadow: 0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
     0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
@@ -36,12 +39,15 @@
   --surface-2: #16191d;
   --surface-3: #212529;
   --surface-4: #0d0f12;
+  --gray-1: #495057;
+  --gray-2: #e0e4e5;
   --clock-surface: #16191d;
   --clock-hand-1: #d1d6d8;
   --clock-hand-2: #e0e4e5;
   --clock-border: #e0e4e5;
   --border: #dee2e6;
   --icon: #f8f9fa;
+  --red: #ff6b6b;
 
   --surface-shadow: 0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
     0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
