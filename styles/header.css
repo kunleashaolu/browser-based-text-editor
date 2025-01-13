@@ -8,27 +8,6 @@
   align-items: center;
   justify-content: space-between;
   position: sticky;
-  top: 0px;
+  top: 0;
   min-width: 280px;
-
-  .title {
-    gap: 0.8em;
-    display: inline-flex;
-    height: min-content;
-    align-items: center;
-    width: fit-content;
-
-    .input {
-      padding-inline: 4px;
-      border: none;
-      background: transparent;
-      text-align: center;
-      outline: none;
-      font-weight: 500;
-
-      &:focus {
-        border-bottom: 1px solid var(--border);
-      }
-    }
-  }
 }
