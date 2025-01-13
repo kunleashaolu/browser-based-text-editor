@@ -2,30 +2,59 @@
   top: 0;
   container-name: sidebar;
   container-type: inline-size;
-  width: 25vw;
-  background: var(--surface-2);
+  width: 20vw;
+  background: var(--surface);
   padding-bottom: var(--space-fluid-2);
   display: none;
   height: 100svh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  position: relative;
+  grid-gap: var(--space-fluid-1);
+
+  .sidenav-header{
+    top: 0;
+    left: 0;
+    position: sticky;
+    background: var(--surface);
+    padding-top: 20px;
+    padding-inline: 0.5em;
+  }
 
   ul {
-    align-self: flex-end;
+    align-self: flex-start;
     display: grid;
     height: fit-content;
 
     li {
-      padding: 0.5em 0.8em;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      padding: 0.5em 1em;
       cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      text-wrap: pretty;
+      align-items: center;
+      font-size: clamp(0.9rem, calc(0.86rem + 0.2vw), 1rem);
+
+      & > svg{
+        opacity: 0;
+      }
 
       & > a {
         text-decoration: none;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: var(--gray-1);
       }
 
       &:hover {
-        background-color: var(--surface-3);
+        & > svg{
+        opacity: 1;
+        }
+
+        & > a{
+          color: var(--gray-2);
+        }
       }
     }
 
@@ -39,4 +68,5 @@
 .sidenav[opened] {
   display: grid;
   position: sticky;
+  grid-template-rows: max-content 1fr;
 }
