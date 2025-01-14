@@ -42,6 +42,7 @@
   position: sticky;
   bottom: var(--space-fluid-1);
   margin-left: 0.5em;
+  margin-right: 0.5em;
   border: none;
   border-radius: 50%;
   transition: 0.2s ease-in-out;
@@ -64,4 +65,13 @@
   border: 1px solid var(--gray-1);
   font-weight: 500;
   font-size: clamp(0.9rem, calc(0.86rem + 0.2vw), 1rem);
+}
+
+
+@container body (max-width: 768px) {
+  &:has(.sidenav[opened]){
+    .button-notes-sidebar-toggle{
+      justify-self: end;
+    }
+  }
 }
