@@ -17,6 +17,7 @@ body {
   display: grid;
   font-size: var(--font-size-0);
 
+
   &:has(.sidenav[opened]) {
     grid-template-columns: max-content 1fr;
   }
@@ -97,26 +98,19 @@ main {
   }
 }
 
-/*@container body (max-width: 780px) {*/
-/*  .sidenav {*/
-/*    width: 80vw;*/
-/*  }*/
-/*}*/
+@container body (max-width: 768px) {
+  .main-container{
+    grid-area: -1/1;
+  }
 
-/*@container main-container (max-width: 580px) {*/
-/*  .tools-menu-container {*/
-/*    display: none;*/
-/*  }*/
+  &:has(.sidenav[opened]) {
+    grid-template-columns: 100vw;
 
-/*  main {*/
-/*    width: 100%;*/
-/*  }*/
-/*}*/
+    .sidenav[opened] {
+      grid-area: -1/1;
+      width: 100vw;
+      z-index: 10;
+    }
+  }
+}
 
-/*@container editor (max-width: 560px) {*/
-/*  h1,*/
-/*  h2,*/
-/*  p {*/
-/*    padding-inline: 5cqw;*/
-/*  }*/
-/*}*/
