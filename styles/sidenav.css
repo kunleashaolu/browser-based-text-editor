@@ -2,8 +2,8 @@
   top: 0;
   container-name: sidebar;
   container-type: inline-size;
-  width: 20vw;
-  background: var(--surface);
+  width: min(25vw, 320px);
+  background-color: var(--surface);
   padding-bottom: var(--space-fluid-2);
   display: none;
   height: 100svh;
