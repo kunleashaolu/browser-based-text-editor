@@ -9,45 +9,49 @@
   grid-area: editor;
   height: fit-content;
   align-self: flex-end;
+}
 
-  .menu-wrapper {
-    display: flex;
+.menu-wrapper {
+  display: flex;
 
-    .menu-button {
-      button {
-        min-height: 40px;
-        padding-inline: 14px;
-        background: none;
-        border: none;
-        display: grid;
+  .menu-button {
+    button {
+      min-height: 40px;
+      padding-inline: 14px;
+      background: none;
+      border: none;
+      display: grid;
+      align-items: center;
+
+      & > span {
+        display: flex;
         align-items: center;
-
-        & > span {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 8px;
-
-          & > span {
-            display: inline-flex;
-          }
-        }
-
-        &:hover,
-        &:focus {
-          background-color: var(--surface-3);
-        }
+        justify-content: center;
+        gap: 8px;
       }
 
-      .radius-left {
-        border-top-left-radius: 8px;
-        border-bottom-left-radius: 8px;
+      .selected {
+        display: inline-flex;
       }
 
-      .radius-right {
-        border-top-right-radius: 8px;
-        border-bottom-right-radius: 8px;
+      .selected-md {
+        display: none;
       }
+
+      &:hover,
+      &:focus {
+        background-color: var(--surface-3);
+      }
+    }
+
+    .radius-left {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+
+    .radius-right {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
     }
   }
 }
@@ -80,6 +84,14 @@
       left: 0;
       opacity: 0;
     }
+
+    .options {
+      display: inline-flex;
+    }
+
+    .options-md{
+      display: none;
+    }
   }
 }
 
@@ -104,4 +116,40 @@
 
 #selected-font-type {
   min-width: 7ch;
+}
+
+@container body (max-width: 768px){
+  &:has(.sidenav[opened]){
+    .tools-menu-container {
+      display: none;
+    }
+  }
+}
+
+@container body (max-width: 425px) {
+  .menu-wrapper{
+    .menu-button{
+      button {
+        .selected {
+          display: none;
+        }
+
+        .selected-md {
+          display: inline-flex;
+        }
+      }
+    }
+  }
+
+  .menu-dropdown{
+    label{
+      .options {
+        display: none;
+      }
+
+      .options-md{
+        display: inline-flex;
+      }
+    }
+  }
 }
