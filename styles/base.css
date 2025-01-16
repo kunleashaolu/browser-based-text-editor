@@ -41,7 +41,7 @@ main {
 }
 
 .section-title {
-  padding-inline: var(--space-fluid-4);
+  padding-inline: 10vw;
   padding-block: var(--space-fluid-2);
 
   border-bottom: 1px solid var(--surface-4);
