@@ -23,40 +23,6 @@ body {
   }
 }
 
-/*h1,*/
-/*.header-1 {*/
-/*  --font-size: var(--font-size-2);*/
-/*  font-size: var(--font-size);*/
-/*  margin-bottom: var(--space-fluid-4);*/
-/*  line-height: 1.2;*/
-/*  text-wrap: balance;*/
-/*}*/
-
-/*h2,*/
-/*.header-2 {*/
-/*  --font-size: var(--font-size-1);*/
-/*  font-size: var(--font-size);*/
-/*  line-height: 1.4;*/
-/*  text-wrap: balance;*/
-/*}*/
-
-/*p,*/
-/*.paragraph {*/
-/*  --font-size: var(--font-size-0);*/
-/*  font-size: var(--font-size);*/
-/*  text-wrap: balance;*/
-/*  line-height: 1.8;*/
-/*  margin: 0;*/
-/*  padding: 0;*/
-/*}*/
-
-/*h1,*/
-/*h2,*/
-/*p {*/
-/*  outline: none;*/
-/*  padding-inline: 18cqw;*/
-/*}*/
-
 .main-container {
   container-name: main-container;
   container-type: inline-size;

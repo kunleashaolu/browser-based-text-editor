@@ -130,8 +130,11 @@
   .menu-wrapper{
     .menu-button{
       button {
-        .selected {
-          display: none;
+        padding-inline: 10px;
+        & > :has(.selected-md) {
+          .selected{
+            display: none;
+          }
         }
 
         .selected-md {
