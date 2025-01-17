@@ -17,7 +17,7 @@
   .menu-button {
     button {
       min-height: 40px;
-      padding-inline: 14px;
+      padding-inline: 12px;
       background: none;
       border: none;
       display: grid;
@@ -30,6 +30,10 @@
         gap: 8px;
       }
 
+      .arrow-icon{
+        transition: .25s ease-in-out;
+      }
+
       .selected {
         display: inline-flex;
       }
@@ -38,10 +42,19 @@
         display: none;
       }
 
-      &:hover,
-      &:focus {
+      &:hover{
         background-color: var(--surface-3);
       }
+
+      &:focus {
+        background-color: var(--surface-3);
+
+        .arrow-icon {
+          transform: rotate(-180deg);
+        }
+      }
+
+
     }
 
     .radius-left {
@@ -131,6 +144,7 @@
     .menu-button{
       button {
         padding-inline: 10px;
+
         & > :has(.selected-md) {
           .selected{
             display: none;
@@ -139,6 +153,10 @@
 
         .selected-md {
           display: inline-flex;
+        }
+
+        .arrow-icon{
+          display: none;
         }
       }
     }
