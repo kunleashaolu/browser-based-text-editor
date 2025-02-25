@@ -51,6 +51,7 @@
   z-index: 20;
   grid-area: editor;
   align-self: flex-end;
+  background-color: var(--surface);
 
   &:hover {
     background: var(--surface-2);

@@ -17,7 +17,6 @@ body {
   display: grid;
   font-size: var(--font-size-0);
 
-
   &:has(.sidenav[opened]) {
     grid-template-columns: max-content 1fr;
   }
@@ -38,10 +37,16 @@ main {
   justify-self: center;
   outline: none;
   grid-area: editor;
+  padding-bottom: var(--space-fluid-5);
+}
+
+#text-area > :not(.section-title){
+  margin-inline: max(5vw, var(--space-fluid-2));
+  margin-top: var(--space-fluid-4);
 }
 
 .section-title {
-  padding-inline: 10vw;
+  padding-inline: max(5vw, var(--space-fluid-2));
   padding-block: var(--space-fluid-2);
 
   border-bottom: 1px solid var(--surface-4);
@@ -65,7 +70,7 @@ main {
 }
 
 @container body (max-width: 768px) {
-  .main-container{
+  .main-container {
     grid-area: -1/1;
   }
 

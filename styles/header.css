@@ -1,9 +1,9 @@
 .header {
   container-name: header;
   container-type: inline-size;
-  background-color: var(--surface);
-  padding-block: var(--space-fluid-1);
+  padding-top: var(--space-fluid-1);
   padding-inline: var(--space-fluid-1);
+  backdrop-filter: blur(3px);
   display: flex;
   align-items: center;
   justify-content: space-between;
