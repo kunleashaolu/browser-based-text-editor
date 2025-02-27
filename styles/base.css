@@ -38,6 +38,7 @@ main {
   outline: none;
   grid-area: editor;
   padding-bottom: var(--space-fluid-5);
+  cursor: text;
 }
 
 #text-area > :not(.section-title){
@@ -65,8 +66,13 @@ main {
       border: none;
       outline: none;
       padding-block: 8px;
+      cursor: text;
     }
   }
+}
+
+.text-box{
+  outline: none;
 }
 
 @container body (max-width: 768px) {

@@ -12,17 +12,6 @@ const theme_switch_button = document.getElementById('theme-switch')
 
 const screen = document.firstElementChild
 
-select_font_type_button.addEventListener('click', () => _setAttr(font_type_options, 'visible'))
-select_text_align_button.addEventListener('click', () => _setAttr(text_align_options, 'visible'))
-notes_toggle_button.addEventListener('click', () => openNotes())
-theme_switch_button.addEventListener('click', (e) => switchTheme(e.target))
-
-font_type_options.addEventListener('click', (e) => onFontTypeChange(e))
-text_align_options.addEventListener('click', (e) => onFontStyleChange(e))
-
-menu_overlay[0].addEventListener('click', () => _removeAttr(font_type_options, 'visible'))
-menu_overlay[1].addEventListener('click', () => _removeAttr(text_align_options, 'visible'))
-
 function _createElement(_e) {
   switch (_e) {
     case 'Heading 1':
@@ -76,3 +65,14 @@ function _setAttr(_element, _attribute) {
 function _removeAttr(_element, _attribute) {
   _element.removeAttribute(_attribute)
 }
+
+select_font_type_button.addEventListener('click', () => _setAttr(font_type_options, 'visible'))
+select_text_align_button.addEventListener('click', () => _setAttr(text_align_options, 'visible'))
+notes_toggle_button.addEventListener('click', () => openNotes())
+theme_switch_button.addEventListener('click', (e) => switchTheme(e.target))
+
+font_type_options.addEventListener('click', (e) => onFontTypeChange(e))
+text_align_options.addEventListener('click', (e) => onFontStyleChange(e))
+
+menu_overlay[0].addEventListener('click', () => _removeAttr(font_type_options, 'visible'))
+menu_overlay[1].addEventListener('click', () => _removeAttr(text_align_options, 'visible'))
