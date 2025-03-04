@@ -21,7 +21,7 @@ function _createElement(_e) {
     case 'Paragraph':
       return document.createElement('p')
     default:
-      return document.createElement('span')
+      return document.createElement('p')
   }
 }
 
