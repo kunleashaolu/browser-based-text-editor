@@ -1,0 +1,14 @@
+{
+  "name": "browser-based-text-editor",
+  "version": "1.0.0",
+  "description": "text editor",
+  "scripts": {
+    "dev": "vite --port 3030",
+    "build": "vite build"
+  },
+  "author": "adekunle",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}
