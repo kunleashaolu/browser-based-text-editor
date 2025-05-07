@@ -1,0 +1,16 @@
+#text-area{
+  /*outline: none;*/
+
+  > :not(.section-title){
+    margin-inline: max(5vw, var(--space-fluid-2));
+  }
+
+  h1,h2{
+    padding-top: var(--space-fluid-3);
+    padding-bottom: var(--space-fluid-3);
+  }
+
+  p{
+    padding-block: var(--space-fluid-1);
+  }
+}

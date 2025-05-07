@@ -1,3 +1,6 @@
+import {setDate} from './clock'
+
+const clock = document.getElementById('clock')
 const selected_font_type = document.getElementById('selected-font-type')
 const font_type_options = document.getElementById('font-type-options')
 const select_font_type_button = document.getElementById('select-font-type-btn')
@@ -76,3 +79,6 @@ text_align_options.addEventListener('click', (e) => onFontStyleChange(e))
 
 menu_overlay[0].addEventListener('click', () => _removeAttr(font_type_options, 'visible'))
 menu_overlay[1].addEventListener('click', () => _removeAttr(text_align_options, 'visible'))
+
+
+setInterval(() => setDate(clock), 1000)

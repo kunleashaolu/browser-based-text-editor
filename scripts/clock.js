@@ -1,6 +1,4 @@
-const clock = document.getElementById('clock')
-
-function setDate(e) {
+export function setDate(e) {
   // Code to set the current time and hand angles.
   const now = new Date()
   const secondsAngle = now.getSeconds() * 6
@@ -11,5 +9,3 @@ function setDate(e) {
   e.style.setProperty('--minute-hand-degrees', minAngle + 'deg')
   e.style.setProperty('--hour-hand-degrees', hourAngle + 'deg')
 }
-
-setInterval(() => setDate(clock), 1000)
