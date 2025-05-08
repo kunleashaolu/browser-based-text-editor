@@ -1,4 +1,4 @@
-.button-theme-toggle label {
+.theme-switch-wrapper label {
   position: relative;
   cursor: pointer;
   display: grid;
@@ -35,7 +35,7 @@
   }
 }
 
-.button-notes-sidebar-toggle {
+.sidebar-toggle {
   height: fit-content;
   display: grid;
   justify-self: start;
@@ -71,7 +71,7 @@
 
 @container body (max-width: 768px) {
   &:has(.sidenav[opened]){
-    .button-notes-sidebar-toggle{
+    .theme-switch-wrapper{
       justify-self: end;
     }
   }

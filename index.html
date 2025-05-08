@@ -9,7 +9,7 @@
     <link href="./styles/base.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <nav class="sidenav" id="notes-sidenav" opened>
+    <nav class="sidenav" opened>
       <div class="sidenav-header">
         <button class="create-note-btn" id="create-note-btn">Create New Note</button>
       </div>
@@ -24,14 +24,14 @@
     </nav>
     <div class="main-container">
       <header id="header-wrapper" class="header">
-        <div class="clock" id="clock">
+        <div class="clock">
           <div class="hand second-hand"></div>
           <div class="hand minute-hand"></div>
           <div class="hand hour-hand"></div>
         </div>
-        <div class="button-theme-toggle">
-          <label id="theme-switch" for="theme-toggle">
-            <input class="toggle" type="checkbox" id="theme-toggle" />
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="theme-switch-btn">
+            <input class="toggle" type="checkbox" id="theme-switch-btn" />
             <svg class="sun" width="23" height="22" viewBox="0 0 23 22" fill="var(--icon)" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_2_17316)">
                 <path
@@ -72,10 +72,10 @@
       <div class="tools-menu-container">
         <ul class="menu-wrapper" role="list">
           <li class="menu-button">
-            <button class="radius-left" id="select-font-type-btn">
+            <button class="radius-left">
               <span>
-                <span id="selected-font-type" class="selected">Heading 1</span>
-                <span id="selected-font-type-md" class="selected-md" >
+                <span class="selected">Heading 1</span>
+                <span class="selected-md" >
                   <svg fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8.637 13V3.669H7.379V7.62H2.758V3.67H1.5V13h1.258V8.728h4.62V13h1.259zm5.329 0V3.669h-1.244L10.5 5.316v1.265l2.16-1.565h.062V13h1.244z"/>
                   </svg>
@@ -85,7 +85,7 @@
                 </svg>
               </span>
             </button>
-            <div id="font-type-options" class="menu-dropdown">
+            <div class="menu-dropdown">
               <label>
                 <input type="radio" name="font-type-option" value="Heading 1" />
                 <span class="options">Heading 1</span>
@@ -255,7 +255,7 @@
           </li>
         </ul>
       </div>
-      <button class="button-notes-sidebar-toggle" id="notes-toggle">
+      <button class="sidebar-toggle">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--icon)" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_17_17457)">
             <path
