@@ -14,7 +14,7 @@
 .menu-wrapper {
   display: flex;
 
-  .menu-button {
+  .menu-button, .menu-button-group {
     button {
       min-height: 40px;
       padding-inline: 12px;
@@ -53,8 +53,6 @@
           transform: rotate(-180deg);
         }
       }
-
-
     }
 
     .radius-left {
@@ -119,15 +117,11 @@
   z-index: 100;
 }
 
-.menu-dropdown[visible] {
+.menu-button button:focus ~ .menu-dropdown{
   display: grid;
 }
 
-.menu-dropdown[visible] ~ .menu-overlay {
-  display: block;
-}
-
-#selected-font-type {
+.radius-left .selected {
   min-width: 7ch;
 }
 
@@ -141,7 +135,7 @@
 
 @container body (max-width: 425px) {
   .menu-wrapper{
-    .menu-button{
+    .menu-button, .menu-button-group {
       button {
         padding-inline: 10px;
 
