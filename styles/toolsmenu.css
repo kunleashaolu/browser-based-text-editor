@@ -74,7 +74,6 @@
   border-radius: 8px;
   overflow: hidden;
   display: none;
-  /* gap: 6px; */
   bottom: 120%;
   z-index: 200;
 
@@ -104,17 +103,6 @@
       display: none;
     }
   }
-}
-
-.menu-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: transparent;
-  z-index: 100;
 }
 
 .menu-button button:focus ~ .menu-dropdown{
