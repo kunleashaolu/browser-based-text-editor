@@ -1,2 +1,65 @@
 dialog {
+  margin: auto;
+  padding: 0;
+  border-color: transparent;
+  border-radius: 18px;
+
+  &, &::backdrop {
+    transition: display 1s allow-discrete,
+    overlay 0.65s allow-discrete,
+    opacity 0.65s ease,
+    transform 0.65s ease;
+
+    /* Exit Stage To */
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  &[open] {
+    opacity: 1;
+    transform: translateY(0px);
+
+    &::backdrop {
+      opacity: 0.4;
+      transform: translateY(0px);
+    }
+  }
+
+  html:has(&[open]) {
+    overflow: hidden;
+    scrollbar-gutter: stable;
+  }
+
+  /* Enter Stage From */
+  /*noinspection CssInvalidAtRule*/
+  @starting-style {
+    &[open],
+    &[open]::backdrop {
+      opacity: 0;
+    }
+
+    &[open] {
+      transform: translateY(10px);
+    }
+  }
+
+  &::backdrop {
+    backdrop-filter: none;
+    background-color: #000b;
+  }
+
+
+
+  .dialog-content {
+    padding: 12px;
+    width: 300px;
+    height: 150px;
+    background: #fefefe;
+
+    & > header{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
 }
