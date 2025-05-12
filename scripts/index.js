@@ -32,9 +32,6 @@ setInterval(() => setDate(clock), 1000)
 
 
 
-
-
-
 function openSidenav() {
   const isOpen = sidenav.hasAttribute('opened')
   isOpen ? sidenav.removeAttribute('opened') : sidenav.setAttribute('opened', '')
