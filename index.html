@@ -11,7 +11,7 @@
   <body>
     <nav class="sidenav" opened>
       <div class="sidenav-header">
-        <button onclick="dialog.showModal()" class="create-note-btn">Create New Note</button>
+        <button class="create-note-btn">Create New Note</button>
       </div>
       <ul role="list">
         <li>
@@ -269,20 +269,20 @@
         </svg>
       </button>
     </div>
-    <dialog id="dialog">
-        <div class="dialog-content">
-          <header>
-            <h3>New note</h3>
-            <button class="close-dialog" title="Close" onclick="dialog.close()">
-              close
-            </button>
-          </header>
-          <label>
-          <input placeholder="Title" id="title" type="text" />
-          </label>
-          <button>Create note</button>
-        </div>
-    </dialog>
+<!--    <dialog id="dialog">-->
+<!--        <div class="dialog-content">-->
+<!--          <header>-->
+<!--            <h3>New note</h3>-->
+<!--            <button class="close-dialog" title="Close" onclick="dialog.close()">-->
+<!--              close-->
+<!--            </button>-->
+<!--          </header>-->
+<!--          <label>-->
+<!--          <input placeholder="Title" id="title" type="text" />-->
+<!--          </label>-->
+<!--          <button>Create note</button>-->
+<!--        </div>-->
+<!--    </dialog>-->
     <script src="./scripts/index.js" type="module"></script>
   </body>
 </html>
