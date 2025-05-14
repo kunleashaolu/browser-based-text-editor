@@ -41,7 +41,6 @@ main {
   outline: none;
   grid-area: editor;
   padding-bottom: var(--space-fluid-5);
-  cursor: text;
 }
 
 @container body (max-width: 768px) {
