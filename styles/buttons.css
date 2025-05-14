@@ -66,6 +66,10 @@
   border: 1px solid var(--gray-1);
   font-weight: 500;
   font-size: clamp(0.9rem, calc(0.86rem + 0.2vw), 1rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
 }
 
 
