@@ -9,7 +9,7 @@
     <link href="./styles/base.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <nav class="sidenav" opened>
+    <nav class="sidenav">
       <div class="sidenav-header">
         <button class="create-note-btn" type="button">
           <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,9 +18,9 @@
           New Note
         </button>
       </div>
-      <ul role="list">
+      <ul role="list" class="notes-list">
         <li>
-          <a>Untitled</a>
+          <a>Note</a>
           <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM3.46 8.88L4.87 7.47L7 9.59L9.12 7.47L10.53 8.88L8.41 11L10.53 13.12L9.12 14.53L7 12.41L4.88 14.53L3.47 13.12L5.59 11L3.46 8.88ZM10.5 1L9.5 0H4.5L3.5 1H0V3H14V1H10.5Z" fill="var(--red)"/>
         </svg>
@@ -34,6 +34,11 @@
           <div class="hand minute-hand"></div>
           <div class="hand hour-hand"></div>
         </div>
+        <section class="section-title">
+          <label for="note-title">
+            <input id="note-title" class="text-input" type="text" placeholder="Untitled" />
+          </label>
+        </section>
         <div class="theme-switch-wrapper">
           <label class="theme-switch" for="theme-switch-btn">
             <input class="toggle" type="checkbox" id="theme-switch-btn" />
@@ -68,11 +73,7 @@
         </div>
       </header>
       <main id="text-area">
-        <section class="section-title">
-          <label for="note-title">
-          <input id="note-title" class="text-input" type="text" placeholder="Untitled" />
-          </label>
-        </section>
+
       </main>
       <div class="tools-menu-container">
         <ul class="menu-wrapper" role="list">

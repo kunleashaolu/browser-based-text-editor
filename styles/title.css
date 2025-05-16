@@ -1,24 +1,20 @@
 .section-title {
-  padding-inline: max(5vw, var(--space-fluid-2));
-  padding-block: var(--space-fluid-2);
-
-  border-bottom: 1px solid var(--surface-3);
-
   label {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-fluid-1);
     justify-content: flex-start;
     color: var(--border);
-    font-size: clamp(0.89rem, calc(0.8rem + 0.2vw), 1rem);
 
     input {
-      font-size: var(--font-size-4);
+      font-size: var(--font-size-0);
       background: transparent;
       border: none;
       outline: none;
       padding-block: 8px;
       cursor: text;
+      text-align: center;
+
+      &:focus {
+        border-bottom: 2px solid var(--surface-3);
+      }
     }
   }
 }
