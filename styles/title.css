@@ -4,18 +4,46 @@
     color: var(--border);
 
     input {
+      --underline-offset: 10px;
+      --underline-thickness: 1px;
+      --underline-color: var(--gray-1);
+
+      --bg-pos: calc(1em + var(--underline-offset) + 1px);
+      --bg-circle: var(--underline-color);
+      --left: calc(var(--underline-thickness) / 2);
+      --width: calc(100% - var(--underline-thickness));
+
+      --bg-line: linear-gradient(var(--underline-color), var(--underline-color)) no-repeat var(--left) var(--bg-pos) / var(--width) var(--underline-thickness);
+
+      --bg-left: radial-gradient( var(--underline-thickness) circle at center, var(--bg-circle) 50%, transparent 51%)
+      no-repeat left var(--bg-pos) / var(--underline-thickness)
+      var(--underline-thickness);
+
+      --bg-right: radial-gradient(
+          var(--underline-thickness) circle at center,
+          var(--bg-circle) 50%,
+          transparent 51%
+      )
+      no-repeat right var(--bg-pos) / var(--underline-thickness)
+      var(--underline-thickness);
+
+      --bg-rounded-underline: var(--bg-left), var(--bg-right), var(--bg-line);
+
       font-size: var(--font-size-0);
       background: transparent;
-      backdrop-filter: blur(5px);
       border: none;
       outline: none;
       padding-block: 8px;
       cursor: text;
       text-align: center;
-      border-bottom: 2px solid transparent;
+      box-decoration-break: clone;
+      width: 100%;
+      transition: 120ms ease-out;
+      transition-property: --underline-color, color;
 
-      &:focus {
-        border-bottom: 2px solid var(--surface-3);
+      &:focus-visible,
+      &:hover {
+        background: var(--bg-rounded-underline);
       }
     }
   }
