@@ -3,11 +3,14 @@
   container-type: inline-size;
   padding-top: var(--space-fluid-1);
   padding-inline: var(--space-fluid-1);
-  backdrop-filter: blur(3px);
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: sticky;
   top: 0;
   min-width: 280px;
+  backdrop-filter: blur(4px);
+  background: linear-gradient(to top, transparent, var(--surface));
+  mask-image: linear-gradient(to bottom, var(--surface) 90%, transparent);
+  scroll-padding-top: var(--space-fluid-3);
 }
