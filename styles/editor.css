@@ -1,16 +1,14 @@
-#text-area{
-  /*outline: none;*/
+main{
+  padding-inline: var(--space-fluid-5);
+  line-height: 1.8;
 
-  > :not(.section-title){
-    margin-inline: max(5vw, var(--space-fluid-2));
+  :first-child{
+    margin-top: var(--space-fluid-4);
   }
+}
 
-  h1,h2{
-    padding-top: var(--space-fluid-3);
-    padding-bottom: var(--space-fluid-3);
-  }
-
-  p{
-    padding-block: var(--space-fluid-1);
+@container body (max-width: 425px) {
+  main{
+    padding-inline: var(--space-fluid-3);
   }
 }
