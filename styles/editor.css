@@ -1,9 +1,13 @@
 main{
   padding-inline: var(--space-fluid-5);
-  line-height: 1.8;
 
-  :first-child{
-    margin-top: var(--space-fluid-4);
+  .wrapper{
+    padding-top: var(--space-fluid-4);
+    outline: none;
+    width: min(100%, 768px);
+    line-height: 1.8;
+    margin: 0 auto;
+    text-wrap: pretty;
   }
 }
 
