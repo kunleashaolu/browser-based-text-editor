@@ -11,6 +11,6 @@
   min-width: 280px;
   backdrop-filter: blur(4px);
   background: linear-gradient(to top, transparent, var(--surface));
-  mask-image: linear-gradient(to bottom, var(--surface) 90%, transparent);
+  mask-image: linear-gradient(to bottom, var(--surface) 100%, transparent);
   scroll-padding-top: var(--space-fluid-3);
 }
