@@ -41,8 +41,13 @@
       transition: 120ms ease-out;
       transition-property: --underline-color, color;
 
-      &:focus-visible,
+
       &:hover {
+        background: var(--bg-rounded-underline);
+      }
+
+      &:focus{
+        --underline-color: var(--gray-2);
         background: var(--bg-rounded-underline);
       }
     }
