@@ -1,8 +1,9 @@
 .sidenav {
+  --width: min(25vw, 320px);
   top: 0;
   container-name: sidebar;
   container-type: inline-size;
-  width: min(25vw, 320px);
+  width: var(--width);
   background-color: var(--surface);
   padding-bottom: var(--space-fluid-2);
   display: none;
