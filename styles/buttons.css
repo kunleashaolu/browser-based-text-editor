@@ -72,10 +72,13 @@
   gap: 0.5em;
 }
 
-
 @container body (max-width: 768px) {
   &:has(.sidenav[opened]){
     .theme-switch-wrapper{
+      justify-self: end;
+    }
+
+    .sidebar-toggle{
       justify-self: end;
     }
   }
