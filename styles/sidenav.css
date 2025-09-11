@@ -26,6 +26,7 @@
     align-self: flex-start;
     display: grid;
     height: fit-content;
+    padding-bottom: var(--space-fluid-4);
 
     li {
       padding: 0.5em 1em;
@@ -38,22 +39,27 @@
 
       & > svg{
         opacity: 0;
+        transform: scale(0.9);
+        transition: ease-out 0.25s;
+        transition-delay: 0.2s;
       }
 
-      & > a {
+      & > span {
         text-decoration: none;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         color: var(--gray-1);
+        transition: 0.25s ease-out;
       }
 
       &:hover {
         & > svg{
-        opacity: 1;
+          opacity: 1;
+          transform: scale(1);
         }
 
-        & > a{
+        & > span{
           color: var(--gray-2);
         }
       }
