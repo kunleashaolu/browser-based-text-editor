@@ -5,6 +5,7 @@ main{
     padding-top: var(--space-fluid-4);
     outline: none;
     width: min(100%, 768px);
+    height: 100%;
     line-height: 1.8;
     margin: 0 auto;
     text-wrap: pretty;
