@@ -5,10 +5,10 @@
 
     input {
       --underline-offset: 10px;
-      --underline-thickness: 1px;
+      --underline-thickness: 2px;
       --underline-color: var(--gray-1);
 
-      --bg-pos: calc(1em + var(--underline-offset) + 1px);
+      --bg-pos: calc(0.5em + var(--underline-offset) + 1px);
       --bg-circle: var(--underline-color);
       --left: calc(var(--underline-thickness) / 2);
       --width: calc(100% - var(--underline-thickness));
@@ -33,7 +33,7 @@
       background: transparent;
       border: none;
       outline: none;
-      padding-block: 8px;
+      /* padding-block: 8px; */
       cursor: text;
       text-align: center;
       box-decoration-break: clone;
