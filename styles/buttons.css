@@ -4,8 +4,7 @@
   display: grid;
   background-color: var(--surface-2);
   border-radius: 50%;
-  min-width: 31px;
-  padding: 0.5em;
+  padding: 0.25em;
 
   svg {
     grid-area: -1/1;
