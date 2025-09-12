@@ -23,6 +23,16 @@ body {
   &:has(.sidenav[opened]) {
     grid-template-columns: max-content 1fr;
   }
+
+  &::after{
+    content: '';
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    height: 30px;
+    width: 100%;
+    background: var(--footer-gradient);
+  }
 }
 
 .main-container {
@@ -45,6 +55,7 @@ main {
 @container body (max-width: 768px) {
   .main-container {
     grid-area: -1/1;
+    height: 100svh;
   }
 
   &:has(.sidenav[opened]) {
