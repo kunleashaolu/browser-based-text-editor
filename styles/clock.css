@@ -8,8 +8,8 @@
   --second-hand-degrees: 0deg;
 
   position: relative;
-  width: 35px;
-  height: 35px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: var(--clock-surface);
   border: 1px solid var(--clock-border);
@@ -19,8 +19,8 @@
   position: absolute;
   left: 50%;
   bottom: 50%;
-  height: 45%;
-  width: 0.6px;
+  height: 42%;
+  width: 0.5px;
   background: var(--second-hand-color);
   transform-origin: bottom center;
   transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
@@ -32,14 +32,14 @@
 }
 
 .hour-hand {
-  height: 36%;
+  height: 32%;
   border-radius: 40px;
   background-color: var(--hour-hand-color);
   transform: rotate(var(--hour-hand-degrees));
 }
 
 .minute-hand {
-  height: 42%;
+  height: 38%;
   background: var(--minute-hand-color);
   transform: rotate(var(--minute-hand-degrees));
 }
