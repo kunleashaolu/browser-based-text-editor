@@ -1,5 +1,5 @@
 .sidenav {
-  --width: min(25vw, 320px);
+  --width: min(65vw, 320px);
   top: 0;
   container-name: sidebar;
   container-type: inline-size;
@@ -8,10 +8,12 @@
   padding-bottom: var(--space-fluid-2);
   display: none;
   height: 100svh;
-  overflow-y: scroll;
+  overflow: hidden;
   scrollbar-width: none;
   position: relative;
   grid-gap: var(--space-fluid-1);
+  transition: 0.4s ease-in-out;
+  transform: translateX(-50px);
 
   .sidenav-header{
     top: 0;
@@ -81,7 +83,9 @@
 }
 
 .sidenav[opened] {
-  display: grid;
   position: sticky;
   grid-template-rows: max-content 1fr;
+  overflow-y: scroll;
+  display: grid;
+  transform: translateX(0px);
 }

@@ -16,13 +16,10 @@ body {
   position: relative;
   background-color: var(--surface);
   font-family: 'Satoshi', sans-serif;
-  grid-template-columns: 1fr;
-  display: grid;
+  display: flex;
   font-size: var(--font-size-0);
-
-  &:has(.sidenav[opened]) {
-    grid-template-columns: max-content 1fr;
-  }
+  overflow-x: hidden;
+  transition: 0.4s ease-in-out;
 
   &::after{
     content: '';
@@ -36,6 +33,7 @@ body {
 }
 
 .main-container {
+  flex: 1;
   container-name: main-container;
   container-type: inline-size;
   display: grid;
@@ -54,18 +52,7 @@ main {
 
 @container body (max-width: 768px) {
   .main-container {
-    grid-area: -1/1;
     height: 100svh;
-  }
-
-  &:has(.sidenav[opened]) {
-    grid-template-columns: 100vw;
-
-    .sidenav[opened] {
-      grid-area: -1/1;
-      width: 100vw;
-      z-index: 10;
-    }
   }
 }
 
