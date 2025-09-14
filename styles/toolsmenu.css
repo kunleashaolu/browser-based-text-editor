@@ -119,15 +119,7 @@
   min-width: 7ch;
 }
 
-@container body (max-width: 768px){
-  &:has(.sidenav[opened]){
-    .tools-menu-container {
-      display: none;
-    }
-  }
-}
-
-@container body (max-width: 425px) {
+@container body (max-width: 426px) {
   .menu-wrapper{
     .menu-button, .menu-button-group {
       button {
