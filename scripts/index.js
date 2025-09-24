@@ -1,33 +1,30 @@
 import {setDate} from './clock'
-import {loadNotes} from "./notes";
 
-const screen = document.firstElementChild
-const clock = document.querySelector('.clock')
-const sidenav = document.querySelector('.sidenav')
-const theme_switch = document.querySelector('.theme-switch')
-const sidebar_toggle_btn = document.querySelector('.sidebar-toggle')
-const menu_btn = document.querySelector('.menu-button')
+const $screen = document.firstElementChild
+const $clock = document.querySelector('.clock')
+const $sidenav = document.querySelector('.sidenav')
+const $themeSwitch = document.querySelector('.theme-switch')
+const $sidebarToggle = document.querySelector('.sidebar-toggle')
+
 
 // set clock
-setInterval(() => setDate(clock), 1000)
-
-// load notes
-loadNotes()
+setInterval(() => setDate($clock), 1000)
 
 // functions
 function openSidenav() {
-  const isOpen = sidenav.hasAttribute('opened')
+  const isOpen = $sidenav.hasAttribute('opened')
+
   isOpen ?
-      sidenav.removeAttribute('opened')
-      : sidenav.setAttribute('opened', '')
+      $sidenav.removeAttribute('opened')
+      : $sidenav.setAttribute('opened', '')
 }
 
 function switchTheme() {
-  theme_switch.querySelector(':scope input').checked ?
-      screen.setAttribute('color-scheme','dark')
-      : screen.setAttribute('color-scheme','light')
+  $themeSwitch.querySelector(':scope input').checked ?
+      $screen.setAttribute('color-scheme','dark')
+      : $screen.setAttribute('color-scheme','light')
 }
 
 // event listeners
-sidebar_toggle_btn.addEventListener('click', () => {openSidenav()})
-theme_switch.addEventListener('click', () => {switchTheme()})
+$sidebarToggle.addEventListener('click', () => {openSidenav()})
+$themeSwitch.addEventListener('click', () => {switchTheme()})
